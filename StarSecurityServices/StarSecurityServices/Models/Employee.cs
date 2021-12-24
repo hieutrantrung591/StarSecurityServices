@@ -26,6 +26,8 @@ namespace StarSecurityServices.Models
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
+        public virtual Department Department { get; set; }
+        public virtual Job Job { get; set; }
         public virtual ICollection<Client> Clients { get; set; }
         public virtual ICollection<EmployeeRole> EmployeeRoles { get; set; }
     }

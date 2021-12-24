@@ -193,6 +193,18 @@ namespace StarSecurityServices.Models
                 entity.Property(e => e.UpdatedAt)
                     .HasColumnType("datetime")
                     .HasColumnName("updated_at");
+
+                entity.HasOne(d => d.Department)
+                    .WithMany(p => p.Employees)
+                    .HasForeignKey(d => d.DepartmentId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_EmployeeDepartment");
+
+                entity.HasOne(d => d.Job)
+                    .WithMany(p => p.Employees)
+                    .HasForeignKey(d => d.JobId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_EmployeeJob");
             });
 
             modelBuilder.Entity<EmployeeRole>(entity =>
@@ -218,6 +230,12 @@ namespace StarSecurityServices.Models
                     .HasForeignKey(d => d.EmployeeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__EmployeeR__emplo__534D60F1");
+
+                entity.HasOne(d => d.Role)
+                    .WithMany(p => p.EmployeeRoles)
+                    .HasForeignKey(d => d.RoleId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_RoleEmployee");
             });
 
             modelBuilder.Entity<Job>(entity =>

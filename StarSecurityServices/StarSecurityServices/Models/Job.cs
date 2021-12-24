@@ -9,6 +9,7 @@ namespace StarSecurityServices.Models
     {
         public Job()
         {
+            Employees = new HashSet<Employee>();
             Vacancies = new HashSet<Vacancy>();
         }
 
@@ -18,6 +19,7 @@ namespace StarSecurityServices.Models
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
+        public virtual ICollection<Employee> Employees { get; set; }
         public virtual ICollection<Vacancy> Vacancies { get; set; }
     }
 }

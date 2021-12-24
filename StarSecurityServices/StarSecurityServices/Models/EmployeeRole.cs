@@ -14,5 +14,6 @@ namespace StarSecurityServices.Models
         public DateTime UpdatedAt { get; set; }
 
         public virtual Employee Employee { get; set; }
+        public virtual Role Role { get; set; }
     }
 }
