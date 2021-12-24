@@ -10,6 +10,7 @@ namespace StarSecurityServices.Models
         public Employee()
         {
             Clients = new HashSet<Client>();
+            EmployeeBranches = new HashSet<EmployeeBranch>();
             EmployeeRoles = new HashSet<EmployeeRole>();
         }
 
@@ -30,6 +31,7 @@ namespace StarSecurityServices.Models
         public virtual Department Department { get; set; }
         public virtual Job Job { get; set; }
         public virtual ICollection<Client> Clients { get; set; }
+        public virtual ICollection<EmployeeBranch> EmployeeBranches { get; set; }
         public virtual ICollection<EmployeeRole> EmployeeRoles { get; set; }
     }
 }

@@ -17,10 +17,12 @@ namespace StarSecurityServices.Models
         {
         }
 
+        public virtual DbSet<Branch> Branches { get; set; }
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<ClientService> ClientServices { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<EmployeeBranch> EmployeeBranches { get; set; }
         public virtual DbSet<EmployeeRole> EmployeeRoles { get; set; }
         public virtual DbSet<Job> Jobs { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
@@ -39,6 +41,39 @@ namespace StarSecurityServices.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+
+            modelBuilder.Entity<Branch>(entity =>
+            {
+                entity.ToTable("Branch");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Address)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("address");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("created_at");
+
+                entity.Property(e => e.Description)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("description");
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("name");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("updated_at");
+            });
 
             modelBuilder.Entity<Client>(entity =>
             {
@@ -211,6 +246,35 @@ namespace StarSecurityServices.Models
                     .HasForeignKey(d => d.JobId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_EmployeeJob");
+            });
+
+            modelBuilder.Entity<EmployeeBranch>(entity =>
+            {
+                entity.ToTable("EmployeeBranch");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.BranchId).HasColumnName("branch_id");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("created_at");
+
+                entity.Property(e => e.EmployeeId).HasColumnName("employee_id");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("updated_at");
+
+                entity.HasOne(d => d.Branch)
+                    .WithMany(p => p.EmployeeBranches)
+                    .HasForeignKey(d => d.BranchId)
+                    .HasConstraintName("FK__EmployeeB__branc__05D8E0BE");
+
+                entity.HasOne(d => d.Employee)
+                    .WithMany(p => p.EmployeeBranches)
+                    .HasForeignKey(d => d.EmployeeId)
+                    .HasConstraintName("FK__EmployeeB__emplo__04E4BC85");
             });
 
             modelBuilder.Entity<EmployeeRole>(entity =>
