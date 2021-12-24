@@ -184,6 +184,12 @@ namespace StarSecurityServices.Models
                     .IsUnicode(false)
                     .HasColumnName("last_name");
 
+                entity.Property(e => e.Password)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("password");
+
                 entity.Property(e => e.Qualification)
                     .IsRequired()
                     .HasMaxLength(20)
