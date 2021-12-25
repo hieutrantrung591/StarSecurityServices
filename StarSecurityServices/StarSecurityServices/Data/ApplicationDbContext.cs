@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using StarSecurityServices.Models;
 
 namespace StarSecurityServices.Data
 {
@@ -12,5 +13,6 @@ namespace StarSecurityServices.Data
             : base(options)
         {
         }
+        public DbSet<StarSecurityServices.Models.Branch> Branch { get; set; }
     }
 }
