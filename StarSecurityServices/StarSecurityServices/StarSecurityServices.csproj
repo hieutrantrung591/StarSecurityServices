@@ -6,6 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Views\AboutUs\Index.cshtml" />
+    <None Include="Views\Branches\Create.cshtml" />
+    <None Include="Views\Branches\Delete.cshtml" />
+    <None Include="Views\Branches\Details.cshtml" />
+    <None Include="Views\Branches\Edit.cshtml" />
+    <None Include="Views\Branches\Index.cshtml" />
+    <None Include="Views\Service\Index.cshtml" />
+    <None Include="Views\Vacancy\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
