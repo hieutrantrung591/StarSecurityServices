@@ -49,7 +49,11 @@ namespace StarSecurityServices
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "areas",
+                    name: "Admin",
+                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                  );
+                endpoints.MapControllerRoute(
+                    name: "Client",
                     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
                   );
                 endpoints.MapControllerRoute(
