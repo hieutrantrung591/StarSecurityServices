@@ -7150,19 +7150,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
+    "C:\\Users\\loctk\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Aptech\\Project 3\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
+      "projectUniqueName": "C:\\Users\\loctk\\Home\\Aptech\\Term3\\Project\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
       "projectName": "StarSecurityServices",
-      "projectPath": "D:\\Aptech\\Project 3\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\Aptech\\Project 3\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\obj\\",
+      "projectPath": "C:\\Users\\loctk\\Home\\Aptech\\Term3\\Project\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
+      "packagesPath": "C:\\Users\\loctk\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\loctk\\Home\\Aptech\\Term3\\Project\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\loctk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7231,7 +7231,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
