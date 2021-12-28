@@ -314,3 +314,4 @@ C:\Users\loctk\Home\Aptech\Term3\Project\Star_Security_Service\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Client\Views\About\Index.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Client\Views\Home\Index.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Client\Views\Shared\_LayoutClient.cshtml.g.cs
+C:\Users\loctk\Home\Aptech\Term3\Project\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Client\Views\Service\Index.cshtml.g.cs
