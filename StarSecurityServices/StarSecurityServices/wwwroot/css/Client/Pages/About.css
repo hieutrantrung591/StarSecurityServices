@@ -6,16 +6,16 @@
 }
 
 
-    .about-us-img::before {
-        position: absolute;
-        content: "";
-        background: #fab909;
-        width: 100%;
-        height: 100%;
-        left: -25px;
-        top: 30px;
-        z-index: -1;
-    }
+.about-us-img::before {
+    position: absolute;
+    content: "";
+    background: #fab909;
+    width: 100%;
+    height: 100%;
+    left: -25px;
+    top: 30px;
+    z-index: -1;
+}
 
 
 
@@ -40,18 +40,18 @@
     z-index: 2;
 }
 
-    .client-review:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        background-color: rgba(0,0,0,.8);
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
+.client-review:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(0,0,0,.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
+
+
 
 img {
     max-width: 100%;
