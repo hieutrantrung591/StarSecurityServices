@@ -1,12 +1,16 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using StarSecurityServices.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
 using System.Threading.Tasks;
 
 namespace StarSecurityServices
@@ -23,12 +27,35 @@ namespace StarSecurityServices
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            var stringConnectdb = Configuration.GetConnectionString("StarSecurity");
+            services.AddDbContext<StarSecurityDBContext>(options => options.UseSqlServer(stringConnectdb));
+            services.AddSession();
+            services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRanges.All }));
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddMemoryCache();
+            services.AddHttpContextAccessor();
+            services.AddAuthentication("CookieAuthentication")
+                .AddCookie("CookieAuthentication", config =>
+                {
+                    config.Cookie.Name = "UserLoginCookie";
+                    config.ExpireTimeSpan = TimeSpan.FromDays(1);
+                    config.LoginPath = "/login.html";
+                    config.LogoutPath = "/logout.html";
+                    config.AccessDeniedPath = "/not-found.html";
+                });
+            services.ConfigureApplicationCookie(options =>
+            {
+                // Cookie settings, only this changes expiration
+                options.Cookie.HttpOnly = true;
+                options.Cookie.Expiration = TimeSpan.FromDays(150);
+                options.ExpireTimeSpan = TimeSpan.FromDays(150);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseSession();   // <== login
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -44,6 +71,10 @@ namespace StarSecurityServices
 
             app.UseRouting();
 
+            // Who are you?
+            app.UseAuthentication();
+
+            // Are you allowed?
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
