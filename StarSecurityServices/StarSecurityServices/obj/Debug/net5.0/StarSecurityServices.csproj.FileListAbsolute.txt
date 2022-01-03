@@ -333,8 +333,6 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cors.dll
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -419,8 +417,6 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Http.dll
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Core.dll
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Stores.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
@@ -603,3 +599,13 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\StarSecurityServices.csproj.AssemblyReference.cache
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Create.cshtml.g.cs
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Delete.cshtml.g.cs
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Details.cshtml.g.cs
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Edit.cshtml.g.cs
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Index.cshtml.g.cs
