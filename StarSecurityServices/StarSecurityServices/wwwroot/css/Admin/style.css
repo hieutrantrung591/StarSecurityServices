@@ -19571,7 +19571,7 @@ pre {
 code {
   padding: 5px;
   color: #fe7c96;
-  font-family: "ubuntu-light", sans-serif;
+  font-family: 'Barlow', sans-serif;
   font-size: 1rem;
   border-radius: 4px;
 }
@@ -19746,11 +19746,13 @@ code {
 }
 
 .font-weight-light {
-  font-family: "ubuntu-light", sans-serif;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
 }
 
 .font-weight-bold {
-  font-family: "ubuntu-bold", sans-serif;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
 }
 
 .font-weight-normal {
@@ -21063,7 +21065,8 @@ code {
   color: #000;
   margin-bottom: .75rem;
   text-transform: capitalize;
-  font-family: "ubuntu-medium", sans-serif;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
   font-size: 1.125rem;
 }
 
@@ -21868,7 +21871,7 @@ dl li {
 .table thead th {
   border-top: 0;
   border-bottom-width: 1px;
-  font-family: "ubuntu-medium", sans-serif;
+  font-family: 'Barlow', sans-serif;
   font-weight: initial;
 }
 

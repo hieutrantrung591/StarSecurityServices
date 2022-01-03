@@ -99,17 +99,11 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.EmployeeId).HasColumnName("employee_id");
 
-                entity.Property(e => e.FirstName)
+                entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false)
-                    .HasColumnName("first_name");
-
-                entity.Property(e => e.LastName)
-                    .IsRequired()
-                    .HasMaxLength(255)
-                    .IsUnicode(false)
-                    .HasColumnName("last_name");
+                    .HasColumnName("name");
 
                 entity.Property(e => e.UpdatedAt)
                     .HasColumnType("datetime")
@@ -118,6 +112,7 @@ namespace StarSecurityServices.Models
                 entity.HasOne(d => d.Employee)
                     .WithMany(p => p.Clients)
                     .HasForeignKey(d => d.EmployeeId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Client__employee__59063A47");
             });
 
@@ -203,21 +198,15 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.DepartmentId).HasColumnName("department_id");
 
-                entity.Property(e => e.FirstName)
-                    .IsRequired()
-                    .HasMaxLength(255)
-                    .IsUnicode(false)
-                    .HasColumnName("first_name");
-
                 entity.Property(e => e.Grade).HasColumnName("grade");
 
                 entity.Property(e => e.JobId).HasColumnName("job_id");
 
-                entity.Property(e => e.LastName)
+                entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false)
-                    .HasColumnName("last_name");
+                    .HasColumnName("name");
 
                 entity.Property(e => e.Password)
                     .IsRequired()
