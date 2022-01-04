@@ -1,0 +1,62 @@
+﻿@model IEnumerable<StarSecurityServices.Models.Department>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutDepartment.cshtml";
+}
+
+<div class="col-lg-12">
+    <h1>Departments</h1>
+</div>
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <div class="col-lg-12">
+                <button type="button" class="btn btn-success btn-fw float-right mb-2" onclick="location.href='@Url.Action("Create", "Departments")'">
+                    <i class="mdi mdi-plus"></i>
+                    <span>Create New</span>
+                </button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">#</th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{int RowNo = 0;}
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="text-center">
+                                @{RowNo++;} @RowNo
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                <div class="d-flex flex-row action-list">
+                                    <div class="btn-warning">
+                                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                    </div>
+
+                                    <div class="btn-info">
+                                        <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                    </div>
+
+                                    <div class="btn-danger">
+                                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

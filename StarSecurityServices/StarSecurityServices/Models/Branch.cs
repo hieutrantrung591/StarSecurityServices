@@ -16,8 +16,8 @@ namespace StarSecurityServices.Models
         public string Name { get; set; }
         public string Address { get; set; }
         public string Description { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public DateTime UpdatedOn { get; set; }
 
         public virtual ICollection<EmployeeBranch> EmployeeBranches { get; set; }
     }

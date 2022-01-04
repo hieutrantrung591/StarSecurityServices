@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -21,6 +23,7 @@ namespace StarSecurityServices.Models
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<ClientService> ClientServices { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
+        public virtual DbSet<Division> Divisions { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<EmployeeBranch> EmployeeBranches { get; set; }
         public virtual DbSet<EmployeeRole> EmployeeRoles { get; set; }
@@ -54,9 +57,9 @@ namespace StarSecurityServices.Models
                     .IsUnicode(false)
                     .HasColumnName("address");
 
-                entity.Property(e => e.CreatedAt)
+                entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("created_at");
+                    .HasColumnName("created_on");
 
                 entity.Property(e => e.Description)
                     .IsRequired()
@@ -70,9 +73,9 @@ namespace StarSecurityServices.Models
                     .IsUnicode(false)
                     .HasColumnName("name");
 
-                entity.Property(e => e.UpdatedAt)
+                entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("updated_at");
+                    .HasColumnName("updated_on");
             });
 
             modelBuilder.Entity<Client>(entity =>
@@ -87,9 +90,9 @@ namespace StarSecurityServices.Models
                     .IsUnicode(false)
                     .HasColumnName("contact");
 
-                entity.Property(e => e.CreatedAt)
+                entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("created_at");
+                    .HasColumnName("created_on");
 
                 entity.Property(e => e.Email)
                     .IsRequired()
@@ -105,9 +108,9 @@ namespace StarSecurityServices.Models
                     .IsUnicode(false)
                     .HasColumnName("name");
 
-                entity.Property(e => e.UpdatedAt)
+                entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("updated_at");
+                    .HasColumnName("updated_on");
 
                 entity.HasOne(d => d.Employee)
                     .WithMany(p => p.Clients)
@@ -124,15 +127,15 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.ClientId).HasColumnName("client_id");
 
-                entity.Property(e => e.CreatedAt)
+                entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("created_at");
+                    .HasColumnName("created_on");
 
                 entity.Property(e => e.ServiceId).HasColumnName("service_id");
 
-                entity.Property(e => e.UpdatedAt)
+                entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("updated_at");
+                    .HasColumnName("updated_on");
 
                 entity.HasOne(d => d.Client)
                     .WithMany(p => p.ClientServices)
@@ -153,9 +156,9 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.CreatedAt)
+                entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("created_at");
+                    .HasColumnName("created_on");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
@@ -163,9 +166,30 @@ namespace StarSecurityServices.Models
                     .IsUnicode(false)
                     .HasColumnName("name");
 
-                entity.Property(e => e.UpdatedAt)
+                entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("updated_at");
+                    .HasColumnName("updated_on");
+            });
+
+            modelBuilder.Entity<Division>(entity =>
+            {
+                entity.ToTable("Division");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.CreatedOn)
+                    .HasColumnType("datetime")
+                    .HasColumnName("created_on");
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("name");
+
+                entity.Property(e => e.UpdatedOn)
+                    .HasColumnType("datetime")
+                    .HasColumnName("updated_on");
             });
 
             modelBuilder.Entity<Employee>(entity =>
@@ -192,11 +216,17 @@ namespace StarSecurityServices.Models
                     .IsUnicode(false)
                     .HasColumnName("contact");
 
-                entity.Property(e => e.CreatedAt)
+                entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("created_at");
+                    .HasColumnName("created_on");
 
                 entity.Property(e => e.DepartmentId).HasColumnName("department_id");
+
+                entity.Property(e => e.Email)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("email");
 
                 entity.Property(e => e.Grade).HasColumnName("grade");
 
@@ -220,9 +250,9 @@ namespace StarSecurityServices.Models
                     .IsUnicode(false)
                     .HasColumnName("qualification");
 
-                entity.Property(e => e.UpdatedAt)
+                entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("updated_at");
+                    .HasColumnName("updated_on");
 
                 entity.HasOne(d => d.Department)
                     .WithMany(p => p.Employees)
@@ -245,15 +275,15 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.BranchId).HasColumnName("branch_id");
 
-                entity.Property(e => e.CreatedAt)
+                entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("created_at");
+                    .HasColumnName("created_on");
 
                 entity.Property(e => e.EmployeeId).HasColumnName("employee_id");
 
-                entity.Property(e => e.UpdatedAt)
+                entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("updated_at");
+                    .HasColumnName("updated_on");
 
                 entity.HasOne(d => d.Branch)
                     .WithMany(p => p.EmployeeBranches)
@@ -272,17 +302,17 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.CreatedAt)
+                entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("created_at");
+                    .HasColumnName("created_on");
 
                 entity.Property(e => e.EmployeeId).HasColumnName("employee_id");
 
                 entity.Property(e => e.RoleId).HasColumnName("role_id");
 
-                entity.Property(e => e.UpdatedAt)
+                entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("updated_at");
+                    .HasColumnName("updated_on");
 
                 entity.HasOne(d => d.Employee)
                     .WithMany(p => p.EmployeeRoles)
@@ -303,9 +333,9 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.CreatedAt)
+                entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("created_at");
+                    .HasColumnName("created_on");
 
                 entity.Property(e => e.Description)
                     .IsRequired()
@@ -319,9 +349,9 @@ namespace StarSecurityServices.Models
                     .IsUnicode(false)
                     .HasColumnName("name");
 
-                entity.Property(e => e.UpdatedAt)
+                entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("updated_at");
+                    .HasColumnName("updated_on");
             });
 
             modelBuilder.Entity<Role>(entity =>
@@ -330,9 +360,9 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.CreatedAt)
+                entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("created_at");
+                    .HasColumnName("created_on");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
@@ -340,9 +370,9 @@ namespace StarSecurityServices.Models
                     .IsUnicode(false)
                     .HasColumnName("name");
 
-                entity.Property(e => e.UpdatedAt)
+                entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("updated_at");
+                    .HasColumnName("updated_on");
             });
 
             modelBuilder.Entity<Service>(entity =>
@@ -351,9 +381,11 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.CreatedAt)
+                entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("created_at");
+                    .HasColumnName("created_on");
+
+                entity.Property(e => e.DivisionId).HasColumnName("division_id");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
@@ -361,9 +393,15 @@ namespace StarSecurityServices.Models
                     .IsUnicode(false)
                     .HasColumnName("name");
 
-                entity.Property(e => e.UpdatedAt)
+                entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("updated_at");
+                    .HasColumnName("updated_on");
+
+                entity.HasOne(d => d.Division)
+                    .WithMany(p => p.Services)
+                    .HasForeignKey(d => d.DivisionId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Service__divisio__29221CFB");
             });
 
             modelBuilder.Entity<Vacancy>(entity =>
@@ -372,9 +410,9 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.CreatedAt)
+                entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("created_at");
+                    .HasColumnName("created_on");
 
                 entity.Property(e => e.Description)
                     .IsRequired()
@@ -386,9 +424,9 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.Number).HasColumnName("number");
 
-                entity.Property(e => e.UpdatedAt)
+                entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime")
-                    .HasColumnName("updated_at");
+                    .HasColumnName("updated_on");
 
                 entity.HasOne(d => d.Job)
                     .WithMany(p => p.Vacancies)
@@ -401,5 +439,57 @@ namespace StarSecurityServices.Models
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+        public override int SaveChanges(bool acceptAllChangesOnSuccess)
+        {
+            OnBeforeSaving();
+            return base.SaveChanges(acceptAllChangesOnSuccess);
+        }
+
+        public override async Task<int> SaveChangesAsync(
+           bool acceptAllChangesOnSuccess,
+           CancellationToken cancellationToken = default(CancellationToken)
+        )
+        {
+            OnBeforeSaving();
+            return (await base.SaveChangesAsync(acceptAllChangesOnSuccess,
+                          cancellationToken));
+        }
+
+        private void OnBeforeSaving()
+        {
+            var entries = ChangeTracker.Entries();
+            var utcNow = DateTime.UtcNow;
+            string vnTimeZoneKey = "SE Asia Standard Time";
+            TimeZoneInfo vnTimeZone = TimeZoneInfo.FindSystemTimeZoneById(vnTimeZoneKey);
+            DateTime ngaygiohientai = TimeZoneInfo.ConvertTimeFromUtc(utcNow, vnTimeZone);
+
+            foreach (var entry in entries)
+            {
+                // for entities that inherit from BaseEntity,
+                // set UpdatedOn / CreatedOn appropriately
+                if (entry.Entity is BaseEntity trackable)
+                {
+                    switch (entry.State)
+                    {
+                        case EntityState.Modified:
+                            // set the updated date to "now"
+                            trackable.UpdatedOn = ngaygiohientai;
+
+                            // mark property as "don't touch"
+                            // we don't want to update on a Modify operation
+                            entry.Property(nameof(trackable.CreatedOn)).IsModified = false;
+                            break;
+
+                        case EntityState.Added:
+                            // set both updated and created date to "now"
+                            trackable.CreatedOn = ngaygiohientai;
+                            trackable.UpdatedOn = ngaygiohientai;
+                            break;
+                    }
+                }
+            }
+        }
+
     }
 }

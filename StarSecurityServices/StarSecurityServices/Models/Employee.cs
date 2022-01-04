@@ -16,6 +16,7 @@ namespace StarSecurityServices.Models
 
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Email { get; set; }
         public string Password { get; set; }
         public string Address { get; set; }
         public string Contact { get; set; }
@@ -24,8 +25,8 @@ namespace StarSecurityServices.Models
         public string Achievement { get; set; }
         public int JobId { get; set; }
         public int DepartmentId { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public DateTime UpdatedOn { get; set; }
 
         public virtual Department Department { get; set; }
         public virtual Job Job { get; set; }

@@ -14,8 +14,8 @@ namespace StarSecurityServices.Models
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public DateTime UpdatedOn { get; set; }
 
         public virtual ICollection<EmployeeRole> EmployeeRoles { get; set; }
     }

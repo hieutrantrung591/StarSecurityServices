@@ -59,7 +59,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Password,Address,Contact,Qualification,Grade,Achievement,JobId,DepartmentId,CreatedAt,UpdatedAt")] Employee employee)
+        public async Task<IActionResult> Create([Bind("Id,Name,Password,Address,Contact,Qualification,Grade,Achievement,JobId,DepartmentId,CreatedOn,UpdatedOn")] Employee employee)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Password,Address,Contact,Qualification,Grade,Achievement,JobId,DepartmentId,CreatedAt,UpdatedAt")] Employee employee)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Password,Address,Contact,Qualification,Grade,Achievement,JobId,DepartmentId,CreatedOn,UpdatedOn")] Employee employee)
         {
             if (id != employee.Id)
             {

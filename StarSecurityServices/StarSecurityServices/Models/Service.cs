@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace StarSecurityServices.Models
 {
-    public partial class Service
+    public partial class Service : BaseEntity
     {
         public Service()
         {
@@ -14,9 +14,8 @@ namespace StarSecurityServices.Models
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
-
+        public int DivisionId { get; set; }
+        public virtual Division Division { get; set; }
         public virtual ICollection<ClientService> ClientServices { get; set; }
     }
 }

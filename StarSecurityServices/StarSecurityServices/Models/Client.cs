@@ -17,8 +17,8 @@ namespace StarSecurityServices.Models
         public string Email { get; set; }
         public string Contact { get; set; }
         public int EmployeeId { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public DateTime UpdatedOn { get; set; }
 
         public virtual Employee Employee { get; set; }
         public virtual ICollection<ClientService> ClientServices { get; set; }
