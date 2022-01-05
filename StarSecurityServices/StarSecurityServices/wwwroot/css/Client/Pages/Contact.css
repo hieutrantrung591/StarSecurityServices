@@ -1,9 +1,4 @@
-﻿*::selection {
-    background: #fff;
-    color: #333;
-}
-
-html {
+﻿html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
@@ -17,17 +12,19 @@ section {
 }
 
 .btn {
-    padding: .6rem 3rem;
+    padding: 1.2rem 3rem;
     font-size: 2rem;
     margin-top: 1rem;
     cursor: pointer;
     border: none;
-    background: var(--gradient);
+    background: #47b2e4;
     color: #fff;
+    border-radius: 5rem;
+    text-transform: capitalize;
 }
 
 .btn:hover {
-    background: #fff;
+    background: #209dd8;
     color: #333;
 }
 .contact {
@@ -41,10 +38,12 @@ section {
 }
 
 .contact form {
-    flex: 1 1 40rem;
-    background: #444;
+    flex: 1 1 4rem;
+    background: #fff;
     padding: 3rem;
     box-shadow: 0 0 1rem rgba(0,0,0,.5);
+    border-top: 0.5rem solid #47b2e4;
+    border-bottom: 0.5rem solid #47b2e4;
 }
 
 .contact form .box {
@@ -55,7 +54,8 @@ section {
     border-bottom: .1rem solid #ccc;
     font-size: 2rem;
     margin: 1rem 0;
-    color: #fff;
+    padding: 0 1rem;
+    color: #212529;
     text-transform: none;
 }
 
@@ -67,7 +67,8 @@ section {
     border-bottom: .1rem solid #ccc;
     font-size: 2rem;
     margin: 1rem 0;
-    color: #fff;
+    padding: 1rem;
+    color: #212529;
     text-transform: none;
     resize: none;
 }
