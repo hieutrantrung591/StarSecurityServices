@@ -15,22 +15,18 @@ body {
     color: #444444;
 }
 
-main#main {
-    padding-top: 10rem;
-}
-
 a {
     color: #47b2e4;
     text-decoration: none;
 }
 
-    a:hover {
-        color: #73c5eb;
-        text-decoration: none;
-    }
+a:hover {
+    color: #73c5eb;
+    text-decoration: none;
+}
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Jost", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -70,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  z-index: 997;
+  z-index: 1020;
   padding: 1rem 0;
   background: #fff;
 }
@@ -89,6 +85,43 @@ box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+# Breadcrumb
+--------------------------------------------------------------*/
+.breadcrumb-area:before {
+    position: absolute;
+    background: rgba(8, 24, 69, 0.9);
+    content: "";
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.breadcrumb-area {
+    position: relative;
+    background-image: url('../../../images/Client/Shared/breadcrumb.jpg');
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5rem 0;
+    z-index: 1;
+}
+
+.breadcrumb-text {
+    text-align: center;
+}
+
+.breadcrumb-text h1 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 2.5em;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
 }
 
 /*--------------------------------------------------------------

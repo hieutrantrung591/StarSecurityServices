@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using PagedList.Core;
+using StarSecurityServices.Helpers;
 using StarSecurityServices.Models;
 
 namespace StarSecurityServices.Areas.Admin.Controllers
@@ -20,10 +22,16 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Employees
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int? page)
         {
-            var starSecurityDBContext = _context.Employees.Include(e => e.Department).Include(e => e.Job);
-            return View(await starSecurityDBContext.ToListAsync());
+            var pageNumber = page == null || page <= 0 ? 1 : page.Value;
+            var pageSize = Utilities.PAGE_SIZE;
+            var lsEmployees = _context.Employees.OrderBy(x => x.Id);
+
+            PagedList<Employee> models = new PagedList<Employee>(lsEmployees, pageNumber, pageSize);
+
+            ViewBag.CurrentPage = pageNumber;
+            return View(models);
         }
 
         // GET: Admin/Employees/Details/5

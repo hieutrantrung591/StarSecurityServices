@@ -28,12 +28,12 @@ section {
     color: #333;
 }
 .contact {
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 8.5rem;
+    padding-top: 8rem;
     padding-bottom: 4rem;
 }
 

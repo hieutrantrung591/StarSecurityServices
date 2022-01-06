@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XMOGfntzJubEzOq0ZnI8hw+xdV3GHn7pZ9sM4MwRqrhOLQyx9IyhNTZDHN2I2tOgohO+nL0McHzsi0d45GhzsQ==",
+  "dgSpecHash": "/fKf9VksxFDQIRVP0E3Y5d/uynruSomhEB74OLiYexiM762+8HmXgpgaNFig1e4pzJ07y2j/E30clO7jbqBmbw==",
   "success": true,
   "projectFilePath": "D:\\Aptech\\Project 3\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
   "expectedPackageFiles": [
@@ -81,6 +81,8 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\pagedlist.core\\1.17.4\\pagedlist.core.1.17.4.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\pagedlist.core.mvc\\3.0.0\\pagedlist.core.mvc.3.0.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

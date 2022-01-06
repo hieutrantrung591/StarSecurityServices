@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
 namespace StarSecurityServices.Models
 {
-    public partial class Role
+    public partial class Role : BaseEntity
     {
         public Role()
         {
@@ -13,10 +14,9 @@ namespace StarSecurityServices.Models
         }
 
         public int Id { get; set; }
-        public string Name { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public DateTime UpdatedOn { get; set; }
 
+        [Required]
+        public string Name { get; set; }
         public virtual ICollection<EmployeeRole> EmployeeRoles { get; set; }
     }
 }
