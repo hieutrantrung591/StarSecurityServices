@@ -1,7 +1,6 @@
 ﻿@using PagedList.Core.Mvc;
 @model PagedList.Core.IPagedList<StarSecurityServices.Models.Client>
 
-
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutClient.cshtml";
@@ -62,18 +61,16 @@
                                     @Html.DisplayFor(modelItem => item.Contact)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Employee.Achievement)
+                                    @Html.DisplayFor(modelItem => item.Employee.Name)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.CreatedOn)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.UpdatedOn)
-                                </td>
-                                <td>
-                                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                    <div class="d-flex flex-row action-list">
+                                        <form>
+                                            <button class="btn btn-warning p-2" asp-action="Edit" asp-route-id="@item.Id">Edit</button>
+                                            <button class="btn btn-info p-2" asp-action="Details" asp-route-id="@item.Id">Details</button>
+                                            <button class="btn btn-danger p-2" asp-action="Delete" asp-route-id="@item.Id">Delete</button>
+                                        </form>
+                                    </div>
                                 </td>
                             </tr>
                         }
@@ -82,7 +79,7 @@
             </table>
             <div class="mt-3" aria-label="Page Navigation">
                 <ul class="pagination">
-                    <pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="Roles" asp-action="Index" />
+                    <pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="Clients" asp-action="Index" />
                 </ul>
             </div>
         </div>

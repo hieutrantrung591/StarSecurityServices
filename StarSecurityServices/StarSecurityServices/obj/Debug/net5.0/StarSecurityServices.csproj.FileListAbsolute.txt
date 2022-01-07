@@ -667,3 +667,4 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Clients\Edit.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Clients\Index.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Customer\Views\Shared\_LayoutCustomer.cshtml.g.cs
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\StarSecurityServices.csproj.AssemblyReference.cache
