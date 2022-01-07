@@ -5,8 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using PagedList.Core;
-using StarSecurityServices.Helpers;
 using StarSecurityServices.Models;
 
 namespace StarSecurityServices.Areas.Admin.Controllers
@@ -22,16 +20,10 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Employees
-        public IActionResult Index(int? page)
+        public async Task<IActionResult> Index()
         {
-            var pageNumber = page == null || page <= 0 ? 1 : page.Value;
-            var pageSize = Utilities.PAGE_SIZE;
-            var lsEmployees = _context.Employees.OrderBy(x => x.Id);
-
-            PagedList<Employee> models = new PagedList<Employee>(lsEmployees, pageNumber, pageSize);
-
-            ViewBag.CurrentPage = pageNumber;
-            return View(models);
+            var starSecurityDBContext = _context.Employees.Include(e => e.Department).Include(e => e.Job);
+            return View(await starSecurityDBContext.ToListAsync());
         }
 
         // GET: Admin/Employees/Details/5
@@ -67,7 +59,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Password,Address,Contact,Qualification,Grade,Achievement,JobId,DepartmentId,CreatedOn,UpdatedOn")] Employee employee)
+        public async Task<IActionResult> Create([Bind("Id,Name,Email,Password,Address,Contact,Qualification,Grade,Achievement,JobId,DepartmentId,CreatedOn,UpdatedOn")] Employee employee)
         {
             if (ModelState.IsValid)
             {
@@ -103,7 +95,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Password,Address,Contact,Qualification,Grade,Achievement,JobId,DepartmentId,CreatedOn,UpdatedOn")] Employee employee)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Email,Password,Address,Contact,Qualification,Grade,Achievement,JobId,DepartmentId,CreatedOn,UpdatedOn")] Employee employee)
         {
             if (id != employee.Id)
             {
