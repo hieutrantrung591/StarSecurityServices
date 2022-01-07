@@ -10,7 +10,7 @@ namespace StarSecurityServices.Models
     {
         public Branch()
         {
-            EmployeeBranches = new HashSet<EmployeeBranch>();
+            Employees = new HashSet<Employee>();
         }
 
         public int Id { get; set; }
@@ -23,6 +23,11 @@ namespace StarSecurityServices.Models
 
         [Required]
         public string Description { get; set; }
-        public virtual ICollection<EmployeeBranch> EmployeeBranches { get; set; }
+
+        [Required]
+        public int RegionId { get; set; }
+
+        public virtual Region Region { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }
