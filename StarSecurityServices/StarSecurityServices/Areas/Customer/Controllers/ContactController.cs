@@ -2,7 +2,7 @@
 
 namespace StarSecurityServices.Areas.Customer.Controllers
 {
-    [Area("Client")]
+    [Area("Customer")]
     public class ContactController : Controller
     {
         public IActionResult Index()

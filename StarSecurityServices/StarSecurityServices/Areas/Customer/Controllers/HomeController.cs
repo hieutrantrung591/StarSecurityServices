@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StarSecurityServices.Areas.Customer.Controllers
 {
-    [Area("Client")]
+    [Area("Customer")]
     public class HomeController : Controller
     {
         public IActionResult Index()

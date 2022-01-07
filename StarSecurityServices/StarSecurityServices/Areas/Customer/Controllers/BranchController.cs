@@ -8,7 +8,7 @@ namespace StarSecurityServices.Areas.Customer.Controllers
 {
     public class BranchController : Controller
     {
-        [Area("Client")]
+        [Area("Customer")]
         public IActionResult Index()
         {
             return View();
