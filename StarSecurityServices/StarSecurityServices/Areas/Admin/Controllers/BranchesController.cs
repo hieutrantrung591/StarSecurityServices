@@ -9,7 +9,7 @@ using PagedList.Core;
 using StarSecurityServices.Helpers;
 using StarSecurityServices.Models;
 
-namespace StarSecurityServices.Areas.Admin
+namespace StarSecurityServices.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class BranchesController : Controller
@@ -26,7 +26,9 @@ namespace StarSecurityServices.Areas.Admin
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
             var pageSize = Utilities.PAGE_SIZE;
-            var lsBranches = _context.Branches.OrderBy(x => x.Id);
+            var lsBranches = _context.Branches
+                                .Include(b => b.Region)
+                                .OrderBy(x => x.Id);
 
             PagedList<Branch> models = new PagedList<Branch>(lsBranches, pageNumber, pageSize);
 
@@ -43,6 +45,7 @@ namespace StarSecurityServices.Areas.Admin
             }
 
             var branch = await _context.Branches
+                .Include(b => b.Region)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (branch == null)
             {
@@ -55,6 +58,7 @@ namespace StarSecurityServices.Areas.Admin
         // GET: Admin/Branches/Create
         public IActionResult Create()
         {
+            ViewData["RegionId"] = new SelectList(_context.Regions, "Id", "Name");
             return View();
         }
 
@@ -63,7 +67,7 @@ namespace StarSecurityServices.Areas.Admin
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Address,Description,CreatedOn,UpdatedOn")] Branch branch)
+        public async Task<IActionResult> Create([Bind("Id,Name,Address,Description,RegionId,CreatedOn,UpdatedOn")] Branch branch)
         {
             if (ModelState.IsValid)
             {
@@ -71,6 +75,7 @@ namespace StarSecurityServices.Areas.Admin
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["RegionId"] = new SelectList(_context.Regions, "Id", "Name", branch.RegionId);
             return View(branch);
         }
 
@@ -87,6 +92,7 @@ namespace StarSecurityServices.Areas.Admin
             {
                 return NotFound();
             }
+            ViewData["RegionId"] = new SelectList(_context.Regions, "Id", "Name", branch.RegionId);
             return View(branch);
         }
 
@@ -95,7 +101,7 @@ namespace StarSecurityServices.Areas.Admin
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Address,Description,CreatedOn,UpdatedOn")] Branch branch)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Address,Description,RegionId,CreatedOn,UpdatedOn")] Branch branch)
         {
             if (id != branch.Id)
             {
@@ -122,6 +128,7 @@ namespace StarSecurityServices.Areas.Admin
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["RegionId"] = new SelectList(_context.Regions, "Id", "Name", branch.RegionId);
             return View(branch);
         }
 
@@ -134,6 +141,7 @@ namespace StarSecurityServices.Areas.Admin
             }
 
             var branch = await _context.Branches
+                .Include(b => b.Region)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (branch == null)
             {

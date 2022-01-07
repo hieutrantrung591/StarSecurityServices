@@ -60,7 +60,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // GET: Admin/EmployeeRoles/Create
         public IActionResult Create()
         {
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Achievement");
+            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Name");
             ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Name");
             return View();
         }
@@ -78,7 +78,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Achievement", employeeRole.EmployeeId);
+            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Name", employeeRole.EmployeeId);
             ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Name", employeeRole.RoleId);
             return View(employeeRole);
         }
@@ -96,7 +96,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Achievement", employeeRole.EmployeeId);
+            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Name", employeeRole.EmployeeId);
             ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Name", employeeRole.RoleId);
             return View(employeeRole);
         }
@@ -133,7 +133,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Achievement", employeeRole.EmployeeId);
+            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Name", employeeRole.EmployeeId);
             ViewData["RoleId"] = new SelectList(_context.Roles, "Id", "Name", employeeRole.RoleId);
             return View(employeeRole);
         }

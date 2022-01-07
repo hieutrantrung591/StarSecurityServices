@@ -33,10 +33,10 @@
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Email)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.FirstOrDefault().Address)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().Contact)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.FirstOrDefault().Contact)
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().Branch)
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Department)
@@ -64,10 +64,10 @@
                                     @Html.DisplayFor(modelItem => item.Email)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Address)
+                                    @Html.DisplayFor(modelItem => item.Contact)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Contact)
+                                    @Html.DisplayFor(modelItem => item.Branch.Name)
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Department.Name)

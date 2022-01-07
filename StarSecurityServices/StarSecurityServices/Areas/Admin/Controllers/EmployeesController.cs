@@ -27,9 +27,10 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
             var pageSize = Utilities.PAGE_SIZE;
             var lsEmployees = _context.Employees
-                                    .Include(s => s.Department)
-                                    .Include(s => s.Job)
-                                    .OrderBy(x => x.Id);
+                                .Include(e => e.Branch)
+                                .Include(e => e.Department)
+                                .Include(e => e.Job)
+                                .OrderBy(x => x.Id);
 
             PagedList<Employee> models = new PagedList<Employee>(lsEmployees, pageNumber, pageSize);
 
@@ -46,6 +47,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             }
 
             var employee = await _context.Employees
+                .Include(e => e.Branch)
                 .Include(e => e.Department)
                 .Include(e => e.Job)
                 .FirstOrDefaultAsync(m => m.Id == id);
@@ -60,6 +62,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // GET: Admin/Employees/Create
         public IActionResult Create()
         {
+            ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Name");
             ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name");
             ViewData["JobId"] = new SelectList(_context.Jobs, "Id", "Name");
             return View();
@@ -70,7 +73,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Email,Password,Address,Contact,Qualification,Grade,Achievement,JobId,DepartmentId,CreatedOn,UpdatedOn")] Employee employee)
+        public async Task<IActionResult> Create([Bind("Id,Name,Email,Password,Address,Contact,Qualification,Grade,Achievement,JobId,DepartmentId,BranchId,CreatedOn,UpdatedOn")] Employee employee)
         {
             if (ModelState.IsValid)
             {
@@ -79,6 +82,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Name", employee.BranchId);
             ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name", employee.DepartmentId);
             ViewData["JobId"] = new SelectList(_context.Jobs, "Id", "Name", employee.JobId);
             return View(employee);
@@ -97,6 +101,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Name", employee.BranchId);
             ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name", employee.DepartmentId);
             ViewData["JobId"] = new SelectList(_context.Jobs, "Id", "Name", employee.JobId);
             return View(employee);
@@ -107,7 +112,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Email,Password,Address,Contact,Qualification,Grade,Achievement,JobId,DepartmentId,CreatedOn,UpdatedOn")] Employee employee)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Email,Password,Address,Contact,Qualification,Grade,Achievement,JobId,DepartmentId,BranchId,CreatedOn,UpdatedOn")] Employee employee)
         {
             if (id != employee.Id)
             {
@@ -134,6 +139,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Name", employee.BranchId);
             ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name", employee.DepartmentId);
             ViewData["JobId"] = new SelectList(_context.Jobs, "Id", "Name", employee.JobId);
             return View(employee);
@@ -148,6 +154,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             }
 
             var employee = await _context.Employees
+                .Include(e => e.Branch)
                 .Include(e => e.Department)
                 .Include(e => e.Job)
                 .FirstOrDefaultAsync(m => m.Id == id);

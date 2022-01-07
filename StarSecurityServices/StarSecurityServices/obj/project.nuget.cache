@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LmJ6uckOP4dhG/OKBJqxwFXZz830vb533jOsuK4Rfa6OT5Gv12+az7KXhxpKM5ijA+ymDH/jUQivKaF7GgPadw==",
+  "dgSpecHash": "fSjdN6Rg16CBZEBzSUAOiAgENh7CKVUvfVOvmRRpvEwXUzh61hd3SzXXpHG7Z2K3No4VPGeuFff29x5FMjMefQ==",
   "success": true,
   "projectFilePath": "D:\\Aptech\\Project 3\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
   "expectedPackageFiles": [
@@ -44,7 +44,7 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.13\\microsoft.entityframeworkcore.analyzers.5.0.13.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.13\\microsoft.entityframeworkcore.design.5.0.13.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.13\\microsoft.entityframeworkcore.relational.5.0.13.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.13\\microsoft.entityframeworkcore.sqlserver.5.0.13.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.12\\microsoft.entityframeworkcore.sqlserver.5.0.12.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.12\\microsoft.entityframeworkcore.tools.5.0.12.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",

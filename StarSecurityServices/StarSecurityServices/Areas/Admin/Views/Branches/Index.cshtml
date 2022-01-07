@@ -32,6 +32,9 @@
                         <th>
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Address)
                         </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().Region)
+                        </th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -52,13 +55,7 @@
                                     @Html.DisplayFor(modelItem => item.Address)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Description)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.CreatedOn)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.UpdatedOn)
+                                    @Html.DisplayFor(modelItem => item.Region.Name)
                                 </td>
                                 <td>
                                     <div class="d-flex flex-row action-list">
