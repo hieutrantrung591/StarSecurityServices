@@ -84,7 +84,7 @@ namespace StarSecurityServices
                     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
                   );
                 endpoints.MapControllerRoute(
-                    name: "Client",
+                    name: "Customer",
                     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
                   );
                 endpoints.MapControllerRoute(

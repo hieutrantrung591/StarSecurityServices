@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace StarSecurityServices.Areas.Client.Controllers
+namespace StarSecurityServices.Areas.Customer.Controllers
 {
     [Area("Client")]
     public class LoginController : Controller

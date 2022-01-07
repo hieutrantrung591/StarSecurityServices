@@ -5,51 +5,59 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutClient.cshtml";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Client</h4>
+<div class="col-lg-12">
+    <h1>Details of Client</h1>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Contact)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Contact)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Employee)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Employee.Achievement)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedOn)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreatedOn)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpdatedOn)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpdatedOn)
-        </dd>
-    </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <div>
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Name)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Contact)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Contact)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Employee)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Employee.Achievement)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.CreatedOn)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.CreatedOn)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.UpdatedOn)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.UpdatedOn)
+                    </dd>
+                </dl>
+            </div>
+
+            <form>
+                <button class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.Id">Edit</button>
+                <button class="btn btn-dark" asp-action="Index">Back to List</button>
+            </form>
+        </div>
+    </div>
 </div>

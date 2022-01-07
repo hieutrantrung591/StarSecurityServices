@@ -48,7 +48,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // GET: Admin/Clients/Create
         public IActionResult Create()
         {
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Achievement");
+            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Name");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Achievement", client.EmployeeId);
+            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Name", client.EmployeeId);
             return View(client);
         }
 
@@ -82,7 +82,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Achievement", client.EmployeeId);
+            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Name", client.EmployeeId);
             return View(client);
         }
 
@@ -118,7 +118,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Achievement", client.EmployeeId);
+            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "Name", client.EmployeeId);
             return View(client);
         }
 
