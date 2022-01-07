@@ -26,7 +26,9 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
             var pageSize = Utilities.PAGE_SIZE;
-            var lsVacancies = _context.Vacancies.OrderBy(x => x.Id);
+            var lsVacancies = _context.Vacancies
+                                    .Include(v => v.Job)
+                                    .OrderBy(x => x.Id);
 
             PagedList<Vacancy> models = new PagedList<Vacancy>(lsVacancies, pageNumber, pageSize);
 

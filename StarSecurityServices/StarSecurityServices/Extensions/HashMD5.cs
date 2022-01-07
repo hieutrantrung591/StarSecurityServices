@@ -9,16 +9,20 @@ namespace StarSecurityServices.Extensions
 {
     public static class HashMD5
     {
-        public static string ToMD5(this string str)
+        public static string GetMD5(string str)
         {
-            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            byte[] bHash = md5.ComputeHash(Encoding.UTF8.GetBytes(str));
-            StringBuilder sbHash = new StringBuilder();
-            foreach(byte b in bHash)
+            MD5 md5 = new MD5CryptoServiceProvider();
+            byte[] fromData = Encoding.UTF8.GetBytes(str);
+            byte[] targetData = md5.ComputeHash(fromData);
+            string byte2String = null;
+
+            for (int i = 0; i < targetData.Length; i++)
             {
-                sbHash.Append(String.Format("{0:x2}", b));
+                byte2String += targetData[i].ToString("x2");
+
             }
-            return sbHash.ToString();
+            return byte2String;
         }
+
     }
 }

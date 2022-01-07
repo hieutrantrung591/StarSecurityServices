@@ -22007,3 +22007,7 @@ li.nav-title {
 li.nav-title p {
     margin: 0;
 }
+
+p.text-secondary {
+    font-size: 0.875rem;
+}

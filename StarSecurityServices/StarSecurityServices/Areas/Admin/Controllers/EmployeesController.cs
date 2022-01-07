@@ -26,7 +26,10 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
             var pageSize = Utilities.PAGE_SIZE;
-            var lsEmployees = _context.Employees.OrderBy(x => x.Id);
+            var lsEmployees = _context.Employees
+                                    .Include(s => s.Department)
+                                    .Include(s => s.Job)
+                                    .OrderBy(x => x.Id);
 
             PagedList<Employee> models = new PagedList<Employee>(lsEmployees, pageNumber, pageSize);
 
@@ -71,6 +74,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                employee.Password = Extensions.HashMD5.GetMD5(employee.Password);
                 _context.Add(employee);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

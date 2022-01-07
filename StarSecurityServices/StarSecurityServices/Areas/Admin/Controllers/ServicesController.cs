@@ -26,7 +26,9 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
             var pageSize = Utilities.PAGE_SIZE;
-            var lsServices = _context.Services.OrderBy(x => x.Id);
+            var lsServices = _context.Services
+                                    .Include(s => s.Division)
+                                    .OrderBy(x => x.Id);
 
             PagedList<Service> models = new PagedList<Service>(lsServices, pageNumber, pageSize);
 
