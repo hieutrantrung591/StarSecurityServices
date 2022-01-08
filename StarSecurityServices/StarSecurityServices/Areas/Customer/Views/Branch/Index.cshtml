@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container mt-5">
     <div class="branch-list">
         <ul class="list-group">
             <li data-pos="[26.175159, 78.837891]" class="list-group-item">
@@ -58,8 +58,13 @@
             </li>
         </ul>
     </div>
-    <h2 class="mt-3">Find us on map</h2>
+    <h2 class="mt-5">Find us on map</h2>
     <div id="map" style="height:500px;"></div>
 </div>
 
-<script src="~/js/leafletjs/map.js"></script>
+@*<script src="~/js/leafletjs/map.js"></script>*@
+<script src="~/js/leafletjs/leaflet-utils.js"></script>
+<script>
+    const map = new Leaflet("map");
+    map.displayMarkers(map.getMakerData());
+</script>

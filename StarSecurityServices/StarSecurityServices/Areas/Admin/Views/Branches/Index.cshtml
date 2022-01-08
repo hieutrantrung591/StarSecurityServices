@@ -38,6 +38,9 @@
                         <th>
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Region)
                         </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().Position)
+                        </th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -64,6 +67,9 @@
                                     @Html.DisplayFor(modelItem => item.Region.Name)
                                 </td>
                                 <td>
+                                    @Html.DisplayFor(modelItem => item.Region.Position)
+                                </td>
+                                <td>
                                     <div class="d-flex flex-row action-list">
                                         <form>
                                             <button class="btn btn-warning p-2" asp-action="Edit" asp-route-id="@item.Id">Edit</button>
@@ -85,3 +91,12 @@
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div id="map-index" style="height:500px;"></div>
+</div>
+
+<script src="~/js/leafletjs/leaflet-utils.js"></script>
+<script>
+    const map = new Leaflet("map-index");
+</script>
