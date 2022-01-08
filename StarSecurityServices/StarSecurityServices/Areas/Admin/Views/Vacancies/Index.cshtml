@@ -35,6 +35,9 @@
                         <th class="text-center">
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Number)
                         </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().Branch)
+                        </th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -56,6 +59,9 @@
                                 </td>
                                 <td class="text-center">
                                     @Html.DisplayFor(modelItem => item.Number)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Branch.Name)
                                 </td>
                                 <td>
                                     <div class="d-flex flex-row action-list">

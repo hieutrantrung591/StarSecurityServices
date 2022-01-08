@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 #nullable disable
@@ -11,6 +12,7 @@ namespace StarSecurityServices.Models
         public Branch()
         {
             Employees = new HashSet<Employee>();
+            Vacancies = new HashSet<Vacancy>();
         }
 
         public int Id { get; set; }
@@ -22,12 +24,23 @@ namespace StarSecurityServices.Models
         public string Address { get; set; }
 
         [Required]
+        public string Phone { get; set; }
+
+        [Required]
         public string Description { get; set; }
 
         [Required]
+        [DisplayName("Region")]
         public int RegionId { get; set; }
+
+        [Required]
+        public decimal Latitude { get; set; }
+
+        [Required]
+        public decimal Longtitude { get; set; }
 
         public virtual Region Region { get; set; }
         public virtual ICollection<Employee> Employees { get; set; }
+        public virtual ICollection<Vacancy> Vacancies { get; set; }
     }
 }

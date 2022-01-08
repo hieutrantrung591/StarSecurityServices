@@ -67,11 +67,24 @@ namespace StarSecurityServices.Models
                     .IsUnicode(false)
                     .HasColumnName("description");
 
+                entity.Property(e => e.Latitude)
+                    .HasColumnType("decimal(10, 10)")
+                    .HasColumnName("latitude");
+
+                entity.Property(e => e.Longtitude)
+                    .HasColumnType("decimal(10, 10)")
+                    .HasColumnName("longtitude");
+
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false)
                     .HasColumnName("name");
+
+                entity.Property(e => e.Phone)
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("phone");
 
                 entity.Property(e => e.RegionId).HasColumnName("region_id");
 
@@ -418,6 +431,8 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
+                entity.Property(e => e.BranchId).HasColumnName("branch_id");
+
                 entity.Property(e => e.CreatedOn)
                     .HasColumnType("datetime")
                     .HasColumnName("created_on");
@@ -435,6 +450,11 @@ namespace StarSecurityServices.Models
                 entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime")
                     .HasColumnName("updated_on");
+
+                entity.HasOne(d => d.Branch)
+                    .WithMany(p => p.Vacancies)
+                    .HasForeignKey(d => d.BranchId)
+                    .HasConstraintName("FK__Vacancy__branch___4D5F7D71");
 
                 entity.HasOne(d => d.Job)
                     .WithMany(p => p.Vacancies)

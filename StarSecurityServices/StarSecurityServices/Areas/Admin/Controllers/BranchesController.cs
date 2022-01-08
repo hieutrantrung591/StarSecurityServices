@@ -67,7 +67,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Address,Description,RegionId,CreatedOn,UpdatedOn")] Branch branch)
+        public async Task<IActionResult> Create([Bind("Id,Name,Address,Phone,Description,RegionId,Latitude,Longtitude,CreatedOn,UpdatedOn")] Branch branch)
         {
             if (ModelState.IsValid)
             {
@@ -101,7 +101,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Address,Description,RegionId,CreatedOn,UpdatedOn")] Branch branch)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Address,Phone,Description,RegionId,Latitude,Longtitude,CreatedOn,UpdatedOn")] Branch branch)
         {
             if (id != branch.Id)
             {

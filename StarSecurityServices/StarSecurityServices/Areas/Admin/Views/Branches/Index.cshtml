@@ -33,6 +33,9 @@
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Address)
                         </th>
                         <th>
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().Phone)
+                        </th>
+                        <th>
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Region)
                         </th>
                         <th>Action</th>
@@ -53,6 +56,9 @@
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Address)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Phone)
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Region.Name)

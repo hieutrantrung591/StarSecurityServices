@@ -21,6 +21,11 @@ namespace StarSecurityServices.Models
         [Required]
         public int Number { get; set; }
 
+        [Required]
+        [DisplayName("Branch")]
+        public int BranchId { get; set; }
+
+        public virtual Branch Branch { get; set; }
         public virtual Job Job { get; set; }
     }
 }
