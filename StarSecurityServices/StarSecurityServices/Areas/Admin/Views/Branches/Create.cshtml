@@ -5,60 +5,89 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutBranch.cshtml";
 }
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
 <div class="col-lg-12">
     <h1>Create New Branch</h1>
     <hr />
 </div>
 
-<div class="col-lg-12 grid-margin stretch-card">
-    <div class="card">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-12">
-                    <form asp-action="Create">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <div class="form-group">
-                            <label asp-for="Name" class="control-label"></label>
-                            <input asp-for="Name" class="form-control" />
-                            <span asp-validation-for="Name" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Address" class="control-label"></label>
-                            <input asp-for="Address" class="form-control" />
-                            <span asp-validation-for="Address" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Phone" class="control-label"></label>
-                            <input asp-for="Phone" class="form-control" />
-                            <span asp-validation-for="Phone" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Description" class="control-label"></label>
-                            <input asp-for="Description" class="form-control" />
-                            <span asp-validation-for="Description" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="RegionId" class="control-label"></label>
-                            <select asp-for="RegionId" class="form-control" asp-items="ViewBag.RegionId"></select>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Latitude" class="control-label"></label>
-                            <input asp-for="Latitude" class="form-control" />
-                            <span asp-validation-for="Latitude" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Longtitude" class="control-label"></label>
-                            <input asp-for="Longtitude" class="form-control" />
-                            <span asp-validation-for="Longtitude" class="text-danger"></span>
-                        </div>
+<div class="row">
+    <div class="col-lg-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Branch Details</h3>
+                        <hr />
 
-                        <div class="form-group">
-                            <input type="submit" value="Create" class="btn btn-primary" />
-                            <button class="btn btn-dark" asp-action="Index">Back to List</button>
-                        </div>
-                    </form>
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label"></label>  <span class="text-danger">*</span>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Address" class="control-label"></label>  <span class="text-danger">*</span>
+                                <input asp-for="Address" class="form-control" />
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Phone" class="control-label"></label>  <span class="text-danger">*</span>
+                                <input asp-for="Phone" class="form-control" />
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Description" class="control-label"></label> <span class="text-danger">*</span>
+                                <input asp-for="Description" class="form-control" />
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="RegionId" class="control-label"></label> <span class="text-danger">*</span>
+                                <select asp-for="RegionId" class="form-control" asp-items="ViewBag.RegionId"></select>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Latitude" class="control-label"></label> <span class="text-danger">*</span>
+                                <input asp-for="Latitude" class="form-control" />
+                                <span asp-validation-for="Latitude" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Longtitude" class="control-label"></label> <span class="text-danger">*</span>
+                                <input asp-for="Longtitude" class="form-control" />
+                                <span asp-validation-for="Longtitude" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                                <button class="btn btn-dark" asp-action="Index">Back to List</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Map Location</h3>
+                        <hr />
+
+                        <div id="map" style="height:30rem;"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script src="~/js/leafletjs/map.js"></script>
