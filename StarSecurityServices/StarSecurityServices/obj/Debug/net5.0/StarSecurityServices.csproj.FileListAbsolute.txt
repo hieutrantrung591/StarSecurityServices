@@ -669,7 +669,6 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Branches\Details.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Branches\Edit.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Branches\Index.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\StarSecurityServices.csproj.AssemblyReference.cache
 C:\Users\loctk\Home\Aptech\Term3\Project\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\loctk\Home\Aptech\Term3\Project\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
 C:\Users\loctk\Home\Aptech\Term3\Project\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Authentication.Cookies.dll

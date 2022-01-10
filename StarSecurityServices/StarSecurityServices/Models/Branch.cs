@@ -34,9 +34,11 @@ namespace StarSecurityServices.Models
         public int RegionId { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{0:0.0#####}", ApplyFormatInEditMode = true)]
         public decimal Latitude { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{0:0.0#####}", ApplyFormatInEditMode = true)]
         public decimal Longtitude { get; set; }
 
         public virtual Region Region { get; set; }
