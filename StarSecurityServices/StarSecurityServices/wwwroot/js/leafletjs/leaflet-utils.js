@@ -22,7 +22,7 @@
         const branchList = document.querySelectorAll('.branch-list ul li');
 
         branchList.forEach(item => {
-            const dataPos = JSON.parse(item.getAttribute('data-pos'))
+            const dataPos = JSON.parse(item.querySelector('.branch-position').textContent)
             const branchName = item.querySelector('b').textContent
             const address = item.querySelector('.address').textContent
             data.push({

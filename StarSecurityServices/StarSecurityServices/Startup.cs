@@ -28,6 +28,10 @@ namespace StarSecurityServices
         public void ConfigureServices(IServiceCollection services)
         {
             var stringConnectdb = Configuration.GetConnectionString("StarSecurity");
+            services.AddMvc().AddRazorPagesOptions(options =>
+            {
+                options.Conventions.AddPageRoute("/Areas/Customer/Views/Home/Index", "");
+            });
             services.AddDbContext<StarSecurityDBContext>(options => options.UseSqlServer(stringConnectdb));
             services.AddSession();
             services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRanges.All }));
@@ -89,7 +93,7 @@ namespace StarSecurityServices
                   );
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

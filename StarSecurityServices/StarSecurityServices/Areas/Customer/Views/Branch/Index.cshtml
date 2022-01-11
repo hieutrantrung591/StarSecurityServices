@@ -1,8 +1,10 @@
-﻿
-@{
-    ViewData["Title"] = "Our network";
-    Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml";
+﻿@model IEnumerable<StarSecurityServices.Models.Branch>
+
+@{ 
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml"; 
 }
+
 <link href="~/css/Client/Utils/common.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
       integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -25,37 +27,29 @@
 
 <div class="container mt-5">
     <div class="branch-list">
+        
         <ul class="list-group">
-            <li data-pos="[26.175159, 78.837891]" class="list-group-item">
-                <div class="branch-name"><b>Name 1</b></div>
-                <div class="address">Address 1</div>
-                <div class="contact">Contact</div>
-                <div class="description">Description</div>
+            @foreach (var item in Model)
+            {
+                // data-pos="[12.570648, 76.772461]"
+            <li class="list-group-item">
+                <div style="display: none;" class="branch-position">@item.GetDetailLatLong()</div>
+
+
+                <div class="branch-name">
+                    <b>@Html.DisplayFor(modelItem => item.Name)</b>
+                </div>
+                <div class="address">
+                    @Html.DisplayFor(modelItem => item.Address)
+                </div>
+                <div class="contact">
+                    @Html.DisplayFor(modelItem => item.Address)
+                </div>
+                <div class="description">
+                    @Html.DisplayFor(modelItem => item.Description)
+                </div>
             </li>
-            <li data-pos="[25.371328, 79.255371]" class="list-group-item">
-                <div class="branch-name"><b>Name 2</b></div>
-                <div class="address">Address 2</div>
-                <div class="contact">Contact</div>
-                <div class="description">Description</div>
-            </li>
-            <li data-pos="[12.570648, 76.772461]" class="list-group-item">
-                <div class="branch-name"><b>Name 3</b></div>
-                <div class="address">Address 3</div>
-                <div class="contact">Contact</div>
-                <div class="description">Description</div>
-            </li>
-            <li data-pos="[18.828316, 83.452148]" class="list-group-item">
-                <div class="branch-name"><b>Name 4</b></div>
-                <div class="address">Address 4</div>
-                <div class="contact">Contact</div>
-                <div class="description">Description</div>
-            </li>
-            <li data-pos="[22.52778, 73.696289]" class="list-group-item">
-                <div class="branch-name"><b>Name 5</b></div>
-                <div class="address">Address 5</div>
-                <div class="contact">Contact</div>
-                <div class="description">Description</div>
-            </li>
+   }
         </ul>
     </div>
     <h2 class="mt-5">Find us on map</h2>
