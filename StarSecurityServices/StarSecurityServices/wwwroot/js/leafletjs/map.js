@@ -1,9 +1,4 @@
-﻿
-
-
-
-
-const data = []
+﻿const data = []
 const branchList = document.querySelectorAll('.branch-list ul li');
 
 branchList.forEach(item => {

@@ -23,14 +23,13 @@
 
         branchList.forEach(item => {
             const dataPos = JSON.parse(item.querySelector('.branch-position').textContent)
-            const branchName = item.querySelector('.branch-name').textContent
+            const branchName = item.querySelector('b').textContent
             const address = item.querySelector('.address').textContent
             data.push({
                 pos: dataPos,
                 branchName,
                 address
             })
-            console.log(dataPos)
         })
         this.data = data;
         return this.data;

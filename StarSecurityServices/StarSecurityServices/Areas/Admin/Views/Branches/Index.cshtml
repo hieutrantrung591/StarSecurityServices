@@ -29,7 +29,7 @@
 </div>
 
 <div class="row">
-    <div class="col-lg-6 grid-margin stretch-card">
+    <div class="col-lg-7 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
                 <table class="table">
@@ -91,7 +91,7 @@
         </div>
     </div>
 
-    <div class="col-lg-6 grid-margin stretch-card">
+    <div class="col-lg-5 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -101,10 +101,33 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <div id="map" style="height:50rem;"></div>
+                <div>
+                    <div class="branch-list" style="display: none;">
+                        <ul class="list-group">
+                            @foreach (var item in Model)
+                            {
+                                // data-pos="[12.570648, 76.772461]"
+                                <li class="list-group-item">
+                                    <div style="display: none;" class="branch-position">@item.GetDetailLatLong()</div>
+
+
+                                    <div class="branch-name">
+                                        <b>@Html.DisplayFor(modelItem => item.Name)</b>
+                                    </div>
+                                    <div class="address">
+                                        @Html.DisplayFor(modelItem => item.Address)
+                                    </div>
+                                    <div class="contact">
+                                        @Html.DisplayFor(modelItem => item.Address)
+                                    </div>
+                                    <div class="description">
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </div>
+                                </li>
+                            }
+                        </ul>
                     </div>
+                    <div id="map" style="height:500px;"></div>
                 </div>
             </div>
         </div>

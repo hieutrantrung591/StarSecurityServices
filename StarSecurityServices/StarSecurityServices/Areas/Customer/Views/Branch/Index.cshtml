@@ -15,44 +15,61 @@
     </div>
 </div>
 
-<div class="container">
-    <div>
-        <div style="display: none;" class="branch-position">[26.175159, 78.837891]</div>
-        @foreach (var region in Model.Regions)
-        {
-    <div class="region-title">@region.Name Region</div>
-                    <div class="branch-list row">
-                        @foreach (var item in Model.Branches)
-                        {
-        @if (item.RegionId == region.Id)
-        {
-    <div class="col-md-4">
-        <div style="display: none;" class="branch-position">@item.GetDetailLatLong()</div>
+<div class="container branch-body">
+    <div class="row">
+        <div class="col-lg-5 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    @foreach (var region in Model.Regions)
+                    {
+                        <div class="region-title">@region.Name Region</div>
+                        <div class="branch-list">
+                            @foreach (var item in Model.Branches)
+                            {
+                                @if (item.RegionId == region.Id)
+                                {
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div style="display: none;" class="branch-position">@item.GetDetailLatLong()</div>
 
-        <div class="branch-name">
-            <b>@Html.DisplayFor(modelItem => item.Name)</b>
-        </div>
-        <div class="address">
-            <i class="mdi mdi-map-marker"></i>
-            @Html.DisplayFor(modelItem => item.Address)
-        </div>
-        <div class="contact">
-            <i class="mdi mdi-phone"></i>
-            @Html.DisplayFor(modelItem => item.Phone)
-        </div>
-    </div>                    }                }
-                    </div>}
-    </div>
+                                            <div class="branch-name">
+                                                <b>@Html.DisplayFor(modelItem => item.Name)</b>
+                                            </div>
 
-    <h2 class="mt-5">Find us on map</h2>
-    <div id="map" style="height:500px;"></div>
+                                            <div class="address">
+                                                <i class="mdi mdi-map-marker"></i>
+                                                @Html.DisplayFor(modelItem => item.Address)
+                                            </div>
+
+                                            <div class="contact">
+                                                <i class="mdi mdi-phone"></i>
+                                                @Html.DisplayFor(modelItem => item.Phone)
+                                            </div>
+                                        </li>
+                                    </ul>
+                                 }
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Find us on map</h1>
+                    <hr />
+                    <div id="map" style="height:500px;"></div>
+                </div>
+            </div>
+        </div>
+    </div> 
 </div>
 
 <!-- Leaflet JS -->
 @*<script src="~/js/leafletjs/map.js"></script>*@
 <script src="~/js/leafletjs/leaflet-utils.js"></script>
 <script>
-    const map = new Leaflet('map');
-    var marker = L.marker([51.5, -0.09]).addTo(map);
+    const map = new Leaflet("map");
     map.displayMarkers(map.getMakerData());
 </script>

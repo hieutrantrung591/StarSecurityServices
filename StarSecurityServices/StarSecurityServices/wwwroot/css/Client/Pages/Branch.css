@@ -1,4 +1,4 @@
-﻿.branch-list.row {
+﻿.branch-list ul {
     margin: 0;
     padding: 2rem;
 }
@@ -9,4 +9,8 @@
     font-weight: 700;
     font-size: 1.2em;
     padding: 1rem;
+}
+
+main div.branch-body {
+    margin-top: 3rem;
 }

@@ -30,14 +30,24 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
 }
 
-header {
-    background-color: #f8f8f8;
-}
-
 .container {
     padding: 0;
 }
 
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+header {
+    background-color: #f8f8f8;
+}
+
+
+.header.shadow {
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -138,7 +148,6 @@ li.nav-item > a:active {
     background-size: cover;
     padding: 5rem 0;
     z-index: 1;
-    margin-bottom: 2rem;
 }
 
 .breadcrumb-text {
