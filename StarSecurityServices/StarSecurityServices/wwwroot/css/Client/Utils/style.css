@@ -30,6 +30,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
 }
 
+header {
+    background-color: #f8f8f8;
+}
+
+.container {
+    padding: 0;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -82,25 +90,29 @@ h1, h2, h3, h4, h5, h6 {
     width: auto;
 }
 
-.navbar-nav > li > a {
+li.nav-item > a {
     color: #020e2a;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     transition: 0.3s;
 }
 
-.navbar-nav > li > a:hover {
+li.nav-item > a:hover {
     color: #fab909;
     background-color: #f8f8f8;
 }
 
-.navbar-nav > li > a:active {
+li.nav-item > a:active {
     color: #47b2e4;
     background-color: #f8f8f8;
 }
 
 .nav.navbar-nav.navbar-right {
     margin: 0.5rem 0;
+}
+
+.nav-item {
+    margin: 0 1rem;
 }
 
 /*--------------------------------------------------------------

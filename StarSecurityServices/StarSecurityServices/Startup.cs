@@ -8,9 +8,11 @@ using Microsoft.Extensions.Hosting;
 using StarSecurityServices.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace StarSecurityServices
@@ -94,6 +96,17 @@ namespace StarSecurityServices
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
+            });
+
+            app.Use(async (context, next) =>
+            {
+                var currentThreadCulture = (CultureInfo)Thread.CurrentThread.CurrentCulture.Clone();
+                currentThreadCulture.NumberFormat = NumberFormatInfo.InvariantInfo;
+
+                Thread.CurrentThread.CurrentCulture = currentThreadCulture;
+                Thread.CurrentThread.CurrentUICulture = currentThreadCulture;
+
+                await next();
             });
         }
     }
