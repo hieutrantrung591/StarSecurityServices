@@ -30,6 +30,7 @@
                 branchName,
                 address
             })
+            console.log(dataPos)
         })
         this.data = data;
         return this.data;

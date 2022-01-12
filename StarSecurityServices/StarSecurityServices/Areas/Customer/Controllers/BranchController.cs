@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using StarSecurityServices.Areas.Customer.ViewModels;
 using StarSecurityServices.Models;
 using System;
 using System.Collections.Generic;
@@ -20,8 +21,14 @@ namespace StarSecurityServices.Areas.Customer.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var starSecurityDBContext = _context.Branches.Include(b => b.Region);
-            return View(await starSecurityDBContext.ToListAsync());
+            var branchList = _context.Branches.Include(b => b.Region);
+            var regionList = _context.Regions;
+
+            BranchRegionViewModel branchRegionViewModel = new BranchRegionViewModel();
+            branchRegionViewModel.Branches = branchList;
+            branchRegionViewModel.Regions = regionList;
+
+            return View(branchRegionViewModel);
         }
     }
 }

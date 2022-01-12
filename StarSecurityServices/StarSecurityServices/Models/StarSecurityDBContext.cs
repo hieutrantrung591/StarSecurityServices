@@ -68,12 +68,14 @@ namespace StarSecurityServices.Models
                     .HasColumnName("description");
 
                 entity.Property(e => e.Latitude)
-                    .HasColumnType("decimal(10, 10)")
-                    .HasColumnName("latitude");
+                    .HasColumnType("decimal(10, 6)")
+                    .HasColumnName("latitude")
+                    .HasPrecision(10, 6);
 
                 entity.Property(e => e.Longtitude)
-                    .HasColumnType("decimal(10, 10)")
-                    .HasColumnName("longtitude");
+                    .HasColumnType("decimal(10, 6)")
+                    .HasColumnName("longtitude")
+                    .HasPrecision(10, 6);
 
                 entity.Property(e => e.Name)
                     .IsRequired()

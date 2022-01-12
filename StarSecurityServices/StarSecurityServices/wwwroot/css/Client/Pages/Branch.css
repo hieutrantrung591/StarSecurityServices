@@ -1,0 +1,12 @@
+﻿.branch-list.row {
+    margin: 0;
+    padding: 2rem;
+}
+
+.region-title {
+    color: #47b2e4;
+    border-bottom: 0.2rem solid #47b2e4;
+    font-weight: 700;
+    font-size: 1.2em;
+    padding: 1rem;
+}

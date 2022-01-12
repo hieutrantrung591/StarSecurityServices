@@ -71,6 +71,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                branch.Latitude = Convert.ToDecimal(branch.Latitude);
+                branch.Longtitude = Convert.ToDecimal(branch.Longtitude);
                 _context.Add(branch);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -112,6 +114,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             {
                 try
                 {
+                    branch.Latitude = Convert.ToDecimal(branch.Latitude);
+                    branch.Longtitude = Convert.ToDecimal(branch.Longtitude);
                     _context.Update(branch);
                     await _context.SaveChangesAsync();
                 }
