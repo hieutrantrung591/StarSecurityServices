@@ -1,10 +1,19 @@
-﻿.about-us-img {
+﻿h1 {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.padding-top-bottom {
+    padding: 4rem 0;
+}
+
+
+.about-us-img {
     max-width: 100%;
     height: auto;
     position: relative;
     z-index: 2;
 }
-
 
 .about-us-img::before {
     position: absolute;
@@ -17,18 +26,19 @@
     z-index: -1;
 }
 
-
-
 .about-count {
     display: flex;
     justify-content: space-between;
     padding: 30px 20px;
 }
 
+.about-description {
+    padding: 0 1.5rem;
+}
+
 .counting-inner {
     margin-top: 5px;
 }
-
 
 .client-review {
     background-image: url(../../../images/Client/About/review_bg.jpg) !important;
@@ -51,8 +61,6 @@
     height: 100%;
 }
 
-
-
 img {
     max-width: 100%;
     height: auto;
@@ -62,4 +70,59 @@ img {
     .counter {
         font-size: 36px;
     }
+}
+
+img.director-board-img {
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto 3rem;
+    border: 0.5rem solid #d4d4d4;
+}
+
+.director-board-title {
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.director-board-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.director-board-area .fa {
+    display: inline-block;
+    padding: 0 1rem;
+    font-size: 1.25em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.director-board-box p {
+    margin-bottom: 2rem;
+}
+
+.chairman-area h3 {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 1.5rem 0;
+    font-size: 1.25em;
+}
+
+.chairman-area p {
+    margin-bottom: 2.5rem;
+}
+
+.chairman-name {
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 2em;
+}
+
+.chairman-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }

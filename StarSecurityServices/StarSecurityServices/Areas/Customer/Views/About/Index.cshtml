@@ -1,8 +1,6 @@
 ﻿
-@{
-    ViewData["Title"] = "About us";
-    Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml";
-}
+@{ ViewData["Title"] = "About us";
+    Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml"; }
 <link rel="stylesheet" href="~/css/Client/Pages/About.css">
 
 <div class="breadcrumb-area">
@@ -17,184 +15,170 @@
     </div>
 </div>
 
-    @* about info *@
-    <div class="about-container pt-100 pb-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="about-description">
-                        <div class="sec-title">
-                            <h1><span class="title-main">About </span>Our Company</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
-                        </div>
-                        <div class="about-count flex-column flex-md-row text-center text-md-left">
-                            <div class="counting-inner">
-                                <div>
-                                    <h2 class="counter">250</h2>
-                                    <h4>Project Done</h4>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="countup-text">
-                                    <h2 class="counter">280</h2>
-                                    <h4>Happy Clients</h4>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="countup-text">
-                                    <h2 class="counter">240</h2>
-                                    <h4>Our employees</h4>
-                                </div>
-                            </div>
-                        </div>
+@* about info *@
+<div class="about-container padding-top-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="about-description">
+                    <div class="sec-title">
+                        <h1 class="mb-4"><span class="title-main">About </span>Our Company</h1>
+                        <p>
+                            We are a professional agency providing customized security arrangements to
+                            the industrial, commercial, and business houses
+                        </p>
+                        <p>
+                            Star securities has been one of the pioneers in the Private Security Industry.
+                            Set up in 2000, the company has been a thought and knowledge leader since
+                            its inception. Through the decade of its existence, Star has endeavored to
+                            provide the best security solutions to its customers through innovation,
+                            commitment to quality, training and strict compliance to international
+                            standards.
+                        </p>
+                        <p>
+                            Setup as Investigation firm almost 10 years ago in Mumbai by our founder - Mr, today the company has
+                            grown into a "Total Security Solutions Provider" offering manned guarding
+                            (MG), investigations (C&I), electronic security systems (ESS) and cash
+                            services (CS) to over 250 corporate customers across 24 states.
+                        </p>
+                        <p>
+                            Star believes in continuously upgrading the quality of our resources and
+                            infrastructure to support the ever-changing customer requirements. In
+                            pursuance to this, Star wants the security business to implement a state-ofthe-art ERP Solution to manage the day-to-day operations of the company.
+                        </p>
                     </div>
                 </div>
-                <div class="col-md-5">
-                    <div class="about-us-img">
-                        <img src="~/images/Client/About/about.jpg" style="max-width: 100%; height: auto;" />
-                    </div>
+            </div>
+            <div class="col-md-5">
+                <div class="about-us-img">
+                    <img src="~/images/Client/About/about.jpg" style="max-width: 100%; height: auto;" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Board of Directors *@
+<div class="chairman-area padding-top-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-5">
+                <div class="text-center">
+                    <h1><span class="title-main">Our </span> Chairman</h1>
                 </div>
             </div>
         </div>
     </div>
 
-    @* Reviews *@
-    <div class="client-review  pt-100 pb-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="client-review-text text-white">
-                        <span class="title-main">What's say about our client</span>
-                        <div class="text-white">
-                            <h1><span class="title-main">Client</span> Review</h1>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, luctus posuere semper felis consectetuer hendrerit, enim varius enim, tellus tincidunt tellus est sed enim varius enim, tellus tincidunt tellus est sed </p>
-                        <a class="btn custom-button" href="#">See All</a>
-                    </div>
-                </div>
-                <div class="col-md-8 no-padding pt-5 pt-md-0">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height:100%;">
-
-                        <div class="carousel-inner text-white h-100 px-5">
-                            <div class="carousel-item active">
-                                <div class="carousel-item-content">
-                                    <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.</p>
-                                    <div class="user-info-container d-flex align-items-center justify-content-center pt-2 pt-md-5">
-                                        <div class="user-info pr-3">
-                                            <h3 class="title-main">David Max</h3>
-                                            <h4>Ceo &amp; Founder</h4>
-                                        </div>
-
-                                        <div class="user-img">
-                                            <img src="~/images/Client/About/user-1.jpg" alt="David Max" class="rounded-circle" style="width: 70px !important; height: 70px !important;" />
-                                        </div>
-
-                                    </div>
-                                </div>
+    <div class="container">
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-9 col-sm-6 col-xs-3">
+                <div class="card o-hidden border-0 shadow-lg">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 chairman-img">
+                                <img src="~/images/Client/About/chairman.jpg" alt="img" class="img-fluid">
                             </div>
-                            <div class="carousel-item">
-                                <div class="carousel-item-content">
-                                    <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.</p>
-                                    <div class="user-info-container d-flex align-items-center justify-content-center pt-2 pt-md-5">
-                                        <div class="user-info pr-3">
-                                            <h3 class="title-main">David Max</h3>
-                                            <h4>Ceo &amp; Founder</h4>
-                                        </div>
-
-                                        <div class="user-img">
-                                            <img src="~/images/Client/About/user-1.jpg" alt="David Max" class="rounded-circle" style="width: 70px !important; height: 70px !important;" />
-                                        </div>
-
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <div class="chairman-name">Mr. Peter Singh</div>
+                                        <hr />
                                     </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="carousel-item-content">
-                                    <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.</p>
-                                    <div class="user-info-container d-flex align-items-center justify-content-center pt-2 pt-md-5">
-                                        <div class="user-info pr-3">
-                                            <h3 class="title-main">David Max</h3>
-                                            <h4>Ceo &amp; Founder</h4>
-                                        </div>
-
-                                        <div class="user-img">
-                                            <img src="~/images/Client/About/user-1.jpg" alt="David Max" class="rounded-circle" style="width: 70px !important; height: 70px !important;" />
-                                        </div>
-
+                                    <div>
+                                        <h3>EARLY CAREER</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget leo elit. Mauris ut mi tempus, hendrerit nisi in, fermentum tortor. Phasellus eu diam at massa consequat lacinia.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3>RECOGNITION</h3>
+                                        <p>
+                                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin consequat at mauris ut auctor. Integer scelerisque quam vitae felis lobortis ultricies. Nulla convallis a velit posuere ultrices. 
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3>ASSOCIATIONS</h3>
+                                        <p>
+                                            Quisque sed ante id ex vulputate egestas sed ut lorem. Aliquam euismod ipsum nunc, tempus pellentesque ipsum pulvinar in. Maecenas at nibh sit amet dui egestas elementum facilisis consectetur elit.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
+@* Board of Directors *@
+<div class="director-board-area padding-top-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-5">
+                <div class="text-center">
+                    <h1><span class="title-main">Board </span>of Directors</h1>
+                </div>
+            </div>
+        </div>
 
-    @* Employees *@
-
-    <div class="team-sec pt-5 pb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="text-center">
-                        <h1><span class="title-main">Our Expert </span>Employees</h1>
-                        <p>Lorem ipsum dolor sit amet, pellentesque enim lorem quis vivamus amet.</p>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="director-board-box">
+                    <img src="~/images/Client/About/director-1.jpg" alt="img" class="director-board-img">
+                    <h3 class="director-board-title text-center">Mr. Thomas Nguyen</h3>
+                    <p>Proin gravida nibhvell aliquet. Aenean sollicitudin bibum auctor nisi elit.</p>
+                    <div class="director-board-icons">
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member text-center">
-                        <div class="team-thumb">
-                            <img class="tm-img" src="~/images/Client/About/tm-1.jpg" alt="" style="max-width: 100%; height: auto;" />
-                        </div>
-                        <h3 class="mt-3">Adalberto</h3>
-                        <h4>Office Security</h4>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tm-about-box-1">
+                    <img src="~/images/Client/About/director-2.jpg" alt="img" class="director-board-img">
+                    <h3 class="director-board-title text-center">Mr. Keith Elison</h3>
+                    <p>Proin gravida nibhvell aliquet. Aenean sollicitudin bibum auctor nisi elit.</p>
+                    <div class="director-board-icons">
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member text-center">
-                        <div class="team-thumb">
-
-                            <img src="~/images/Client/About/tm-2.jpg" style="max-width: 100%; height: auto;" />
-
-                        </div>
-                        <h3 class="mt-3">Alejandro</h3>
-                        <h4>House Security</h4>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tm-about-box-1">
+                    <img src="~/images/Client/About/director-3.jpg" alt="img" class="director-board-img">
+                    <h3 class="director-board-title text-center">Mr. Uday Nehru</h3>
+                    <p>Proin gravida nibhvell aliquet. Aenean sollicitudin bibum auctor nisi elit.</p>
+                    <div class="director-board-icons">
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member text-center">
-                        <div class="team-thumb">
-
-                            <img src="~/images/Client/About/tm-3.jpg" style="max-width: 100%; height: auto;" />
-
-                        </div>
-                        <h3 class="mt-3">Ambrose</h3>
-                        <h4>Bank Security</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="team-member text-center">
-                        <div class="team-thumb">
-                            <img src="~/images/Client/About/tm-1.jpg" style="max-width: 100%; height: auto;" />
-
-                        </div>
-                        <h3 class="mt-3">Arnoldo</h3>
-                        <h4>Parking Security </h4>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="tm-about-box-1">
+                    <img src="~/images/Client/About/director-4.jpg" alt="img" class="director-board-img">
+                    <h3 class="director-board-title text-center">Mr. Peter Smith</h3>
+                    <p>Proin gravida nibhvell aliquet. Aenean sollicitudin bibum auctor nisi elit.</p>
+                    <div class="director-board-icons">
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>

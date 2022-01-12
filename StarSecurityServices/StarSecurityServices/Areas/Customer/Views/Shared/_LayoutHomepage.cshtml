@@ -8,12 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Responsive Homepage design with Bootstrap and Animate css</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="~/css/Client/Pages/Home.css">
 
+    <link rel="stylesheet" href="~/css/Client/Pages/Home.css">
+    <link href="~/css/Client/Utils/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -38,16 +40,16 @@
                         <li>
                             <a class="nav-link text-dark" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                         <li>
+                        <li>
                             <a class="nav-link text-dark" asp-area="Customer" asp-controller="About" asp-action="Index">About Us</a>
                         </li>
-                         <li>
+                        <li>
                             <a class="nav-link text-dark" asp-area="Customer" asp-controller="Service" asp-action="Index">Services</a>
                         </li>
-                         <li>
+                        <li>
                             <a class="nav-link text-dark" asp-area="Customer" asp-controller="Contact" asp-action="Index">Contact Us</a>
                         </li>
-                         <li>
+                        <li>
                             <a class="nav-link text-dark" asp-area="Customer" asp-controller="Login" asp-action="Index"><i class="fas fa-user"></i></a>
                         </li>
                     </ul>
@@ -97,7 +99,6 @@
                         <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">About Us</a></p>
                     </div>
                 </div>
-
             </div>
 
             <!-- Controls -->
@@ -114,6 +115,67 @@
     </header>
 
     @RenderBody();
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <img src="~/images/Client/Logos/logo-white.png" alt="" class="img-fluid">
+                        <p>
+                            203 Walkeshwar Road, Malabar Hill <br>
+                            Mumbai, Maharashtra<br>
+                            India <br><br>
+                            <strong>Phone:</strong> +1 5589 55488 55<br>
+                            <strong>Email:</strong> info@example.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Our Business</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Our Network</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Careers with Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">User Guides</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Technical Support</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Social Networks</h4>
+                        <p>Follow us to get the latest news about our services</p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Star</span></strong>. All Rights Reserved
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
