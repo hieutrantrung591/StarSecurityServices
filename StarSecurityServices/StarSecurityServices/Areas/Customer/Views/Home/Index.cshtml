@@ -1,4 +1,4 @@
-﻿@{
+﻿@{ 
     ViewData["Title"] = "HomePage";
     Layout = "~/areas/Customer/views/shared/_LayoutHomepage.cshtml";
 }
@@ -112,64 +112,58 @@
                 </div>
             </div>
             <div class="col-md-8 no-padding pt-5 pt-md-0">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height:100%;">
+                <div id="carousel-1" class="carousel slide" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <p class="text-white customer-review">Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.</p>
+                            <div class="user-info-container">
+                                <div class="user-info pr-3">
+                                    <h3 class="title-main">David Max</h3>
+                                    <h4 class="text-white">Ceo &amp; Founder</h4>
+                                </div>
 
-                    <div class="carousel-inner text-white h-100 px-5">
-                        <div class="carousel-item active">
-                            <div class="carousel-item-content">
-                                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.</p>
-                                <div class="user-info-container d-flex align-items-center justify-content-center pt-2 pt-md-5">
-                                    <div class="user-info pr-3">
-                                        <h3 class="title-main">David Max</h3>
-                                        <h4>Ceo &amp; Founder</h4>
-                                    </div>
+                                <div class="user-img">
+                                    <img src="~/images/Client/About/user-1.jpg" alt="David Max" class="rounded-circle" style="width: 70px !important; height: 70px !important;" />
+                                </div>
 
-                                    <div class="user-img">
-                                        <img src="~/images/Client/About/user-1.jpg" alt="David Max" class="rounded-circle" style="width: 70px !important; height: 70px !important;" />
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p class="text-white customer-review">Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.</p>
+                            <div class="user-info-container">
+                                <div class="user-info pr-3">
+                                    <h3 class="title-main">David Max</h3>
+                                    <h4 class="text-white">Ceo &amp; Founder</h4>
+                                </div>
 
+                                <div class="user-img">
+                                    <img src="~/images/Client/About/user-1.jpg" alt="David Max" class="rounded-circle" style="width: 70px !important; height: 70px !important;" />
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="carousel-item-content">
-                                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.</p>
-                                <div class="user-info-container d-flex align-items-center justify-content-center pt-2 pt-md-5">
-                                    <div class="user-info pr-3">
-                                        <h3 class="title-main">David Max</h3>
-                                        <h4>Ceo &amp; Founder</h4>
-                                    </div>
-
-                                    <div class="user-img">
-                                        <img src="~/images/Client/About/user-1.jpg" alt="David Max" class="rounded-circle" style="width: 70px !important; height: 70px !important;" />
-                                    </div>
-
+                        <div class="item">
+                            <p class="text-white customer-review">Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.</p>
+                            <div class="user-info-container">
+                                <div class="user-info pr-3">
+                                    <h3 class="title-main">David Max</h3>
+                                    <h4 class="text-white">Ceo &amp; Founder</h4>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="carousel-item-content">
-                                <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec.</p>
-                                <div class="user-info-container d-flex align-items-center justify-content-center pt-2 pt-md-5">
-                                    <div class="user-info pr-3">
-                                        <h3 class="title-main">David Max</h3>
-                                        <h4>Ceo &amp; Founder</h4>
-                                    </div>
 
-                                    <div class="user-img">
-                                        <img src="~/images/Client/About/user-1.jpg" alt="David Max" class="rounded-circle" style="width: 70px !important; height: 70px !important;" />
-                                    </div>
-
+                                <div class="user-img">
+                                    <img src="~/images/Client/About/user-1.jpg" alt="David Max" class="rounded-circle" style="width: 70px !important; height: 70px !important;" />
                                 </div>
+
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-1" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <a class="right carousel-control" href="#carousel-1" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
@@ -236,6 +230,17 @@
         </div>
     </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+    $('#myCarousel').carousel({
+        interval: 10000,
+        wrap: true,
+        keyboard: true
+    });
+</script>
 
 
 
