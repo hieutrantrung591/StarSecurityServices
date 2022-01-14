@@ -19,7 +19,7 @@ namespace StarSecurityServices.Areas.Customer.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             var branchList = _context.Branches.Include(b => b.Region);
             var regionList = _context.Regions;

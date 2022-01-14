@@ -1,0 +1,44 @@
+﻿.job-banner.breadcrumb-area:before {
+    background: rgba(8, 24, 69, 0.5);
+}
+
+.job-banner.breadcrumb-area {
+    background-image: url('../../../images/Client/About/job-details-banner-l.jpg');
+}
+
+.job-area {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.badge {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    font-size: 0.875em;
+    font-weight: 500;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-big {
+    padding: 1rem 3rem;
+}
+
+.job-title {
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: 0;
+    line-height: 120%;   
+}
+
+.job-branch {
+    font-size: 1.25em;
+}
+
+.job-description {
+    margin: 3rem 0;
+}

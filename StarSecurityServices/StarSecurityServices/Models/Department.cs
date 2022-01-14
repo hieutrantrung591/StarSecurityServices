@@ -11,6 +11,7 @@ namespace StarSecurityServices.Models
         public Department()
         {
             Employees = new HashSet<Employee>();
+            Vacancies = new HashSet<Vacancy>();
         }
 
         public int Id { get; set; }
@@ -18,5 +19,6 @@ namespace StarSecurityServices.Models
         [Required]
         public string Name { get; set; }
         public virtual ICollection<Employee> Employees { get; set; }
+        public virtual ICollection<Vacancy> Vacancies { get; set; }
     }
 }

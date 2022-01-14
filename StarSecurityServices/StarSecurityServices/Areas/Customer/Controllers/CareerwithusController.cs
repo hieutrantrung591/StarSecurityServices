@@ -33,6 +33,7 @@ namespace StarSecurityServices.Areas.Customer.Controllers
                 lsVacancies = _context.Vacancies
                                     .AsNoTracking().Where(x => x.Job.Name == searchString.Trim())
                                     .Include(v => v.Branch)
+                                    .Include(v => v.Department)
                                     .Include(v => v.Job)
                                     .OrderBy(x => x.Id)
                                     .ToList();
@@ -42,6 +43,7 @@ namespace StarSecurityServices.Areas.Customer.Controllers
                 lsVacancies = _context.Vacancies
                                     .AsNoTracking()
                                     .Include(v => v.Branch)
+                                    .Include(v => v.Department)
                                     .Include(v => v.Job)
                                     .OrderBy(x => x.Id)
                                     .ToList();
@@ -50,6 +52,27 @@ namespace StarSecurityServices.Areas.Customer.Controllers
             PagedList<Vacancy> models = new PagedList<Vacancy>(lsVacancies.AsQueryable(), pageNumber, pageSize);
             ViewBag.CurrentPage = pageNumber;
             return View(models);
+        }
+
+        // GET: Admin/Vacancies/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var vacancy = await _context.Vacancies
+                .Include(v => v.Branch)
+                .Include(v => v.Department)
+                .Include(v => v.Job)
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (vacancy == null)
+            {
+                return NotFound();
+            }
+
+            return View(vacancy);
         }
     }
 }

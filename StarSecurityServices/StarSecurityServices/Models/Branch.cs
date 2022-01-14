@@ -44,7 +44,8 @@ namespace StarSecurityServices.Models
         public virtual Region Region { get; set; }
         public virtual ICollection<Employee> Employees { get; set; }
         public virtual ICollection<Vacancy> Vacancies { get; set; }
-        public String GetDetailLatLong() {
+        public String GetDetailLatLong()
+        {
             return $"[{Latitude.ToString().Replace(",", ".")}, {Longtitude.ToString().Replace(",", ".")}]";
         }
     }

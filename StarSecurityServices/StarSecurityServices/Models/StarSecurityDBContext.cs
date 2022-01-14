@@ -63,8 +63,7 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.Description)
                     .IsRequired()
-                    .HasMaxLength(255)
-                    .IsUnicode(false)
+                    .HasColumnType("text")
                     .HasColumnName("description");
 
                 entity.Property(e => e.Latitude)
@@ -84,6 +83,7 @@ namespace StarSecurityServices.Models
                     .HasColumnName("name");
 
                 entity.Property(e => e.Phone)
+                    .IsRequired()
                     .HasMaxLength(30)
                     .IsUnicode(false)
                     .HasColumnName("phone");
@@ -341,8 +341,7 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.Description)
                     .IsRequired()
-                    .HasMaxLength(255)
-                    .IsUnicode(false)
+                    .HasColumnType("text")
                     .HasColumnName("description");
 
                 entity.Property(e => e.Name)
@@ -439,15 +438,21 @@ namespace StarSecurityServices.Models
                     .HasColumnType("datetime")
                     .HasColumnName("created_on");
 
+                entity.Property(e => e.DepartmentId).HasColumnName("department_id");
+
                 entity.Property(e => e.Description)
                     .IsRequired()
-                    .HasMaxLength(255)
-                    .IsUnicode(false)
+                    .HasColumnType("text")
                     .HasColumnName("description");
 
                 entity.Property(e => e.JobId).HasColumnName("job_id");
 
                 entity.Property(e => e.Number).HasColumnName("number");
+
+                entity.Property(e => e.Status)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("status");
 
                 entity.Property(e => e.UpdatedOn)
                     .HasColumnType("datetime")
@@ -456,7 +461,13 @@ namespace StarSecurityServices.Models
                 entity.HasOne(d => d.Branch)
                     .WithMany(p => p.Vacancies)
                     .HasForeignKey(d => d.BranchId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Vacancy__branch___4D5F7D71");
+
+                entity.HasOne(d => d.Department)
+                    .WithMany(p => p.Vacancies)
+                    .HasForeignKey(d => d.DepartmentId)
+                    .HasConstraintName("FK__Vacancy__departm__0B5CAFEA");
 
                 entity.HasOne(d => d.Job)
                     .WithMany(p => p.Vacancies)
@@ -490,9 +501,6 @@ namespace StarSecurityServices.Models
         {
             var entries = ChangeTracker.Entries();
             var utcNow = DateTime.UtcNow;
-            string vnTimeZoneKey = "SE Asia Standard Time";
-            TimeZoneInfo vnTimeZone = TimeZoneInfo.FindSystemTimeZoneById(vnTimeZoneKey);
-            DateTime ngaygiohientai = TimeZoneInfo.ConvertTimeFromUtc(utcNow, vnTimeZone);
 
             foreach (var entry in entries)
             {
@@ -504,7 +512,7 @@ namespace StarSecurityServices.Models
                     {
                         case EntityState.Modified:
                             // set the updated date to "now"
-                            trackable.UpdatedOn = ngaygiohientai;
+                            trackable.UpdatedOn = utcNow;
 
                             // mark property as "don't touch"
                             // we don't want to update on a Modify operation
@@ -513,8 +521,8 @@ namespace StarSecurityServices.Models
 
                         case EntityState.Added:
                             // set both updated and created date to "now"
-                            trackable.CreatedOn = ngaygiohientai;
-                            trackable.UpdatedOn = ngaygiohientai;
+                            trackable.CreatedOn = utcNow;
+                            trackable.UpdatedOn = utcNow;
                             break;
                     }
                 }

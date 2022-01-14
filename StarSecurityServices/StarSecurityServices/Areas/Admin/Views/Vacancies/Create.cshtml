@@ -7,12 +7,18 @@
 
 @section Styles {
     <!-- include summernote css/js -->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+
+    <style>
+        .note-btn.dropdown-toggle:after {
+            content: none;
+        }
+    </style>
 }
 
 <div class="col-lg-12">
-    <h1>Create New Vacancy</h1>
+    <h2>Create New Vacancy</h2>
     <hr />
 </div>
 
@@ -28,6 +34,10 @@
                             <select asp-for="JobId" class="form-control" asp-items="ViewBag.JobId"></select>
                         </div>
                         <div class="form-group">
+                            <label asp-for="DepartmentId" class="control-label"></label> <span class="text-danger">*</span>
+                            <select asp-for="DepartmentId" class="form-control" asp-items="ViewBag.DepartmentId"></select>
+                        </div>
+                        <div class="form-group">
                             <label asp-for="Description" class="control-label"></label> <span class="text-danger">*</span>
                             <div>
                                 <textarea id="summernote" asp-for="Description"></textarea>
@@ -38,6 +48,11 @@
                             <label asp-for="Number" class="control-label"></label> <span class="text-danger">*</span>
                             <input asp-for="Number" class="form-control" />
                             <span asp-validation-for="Number" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Status" class="control-label"></label> <span class="text-danger">*</span>
+                            <input asp-for="Status" class="form-control" />
+                            <span asp-validation-for="Status" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="BranchId" class="control-label"></label> <span class="text-danger">*</span>
@@ -66,6 +81,8 @@
                 maxHeight: null,             // set maximum height of editor
                 focus: true                  // set focus to editable area after initializing summernote
             });
+
+            $('.dropdown-toggle').dropdown()
         });
     </script>
 }

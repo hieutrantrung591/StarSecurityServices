@@ -7,7 +7,7 @@
 }
 
 <div class="col-lg-12">
-    <h1 class="admin-title">Vacancies</h1>
+    <h2 class="admin-title">Vacancies</h2>
 </div>
 
 <div class="col-lg-12">
@@ -36,7 +36,13 @@
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Number)
                         </th>
                         <th>
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().Status)
+                        </th>
+                        <th>
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Branch)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().Department)
                         </th>
                         <th>Action</th>
                     </tr>
@@ -61,8 +67,15 @@
                                     @Html.DisplayFor(modelItem => item.Number)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Branch.Name)
+                                    @Html.DisplayFor(modelItem => item.Status)
                                 </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Branch.Address)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Department.Name)
+                                </td>
+                                
                                 <td>
                                     <div class="d-flex flex-row action-list">
                                         <form>

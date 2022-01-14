@@ -5,11 +5,17 @@
     ViewData["Title"] = "Careers with Us";
     Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml";
 }
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-<!-- font awesome cdn link  -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+@section Styles {
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="~/css/Client/Pages/Career.css" />
+}
 
 <div class="breadcrumb-area">
     <div class="container">
@@ -25,8 +31,8 @@
 
 <div class="banner">
     <div class="container py-5 search">
-        <h1>Find Your Dream Careers</h1>
-        <h3>Get insights such as salaries, interviews, and skills for your dream career</h3>
+        <h4>Find Your Dream Careers</h4>
+        <h6>Get insights such as salaries, interviews, and skills for your dream career</h6>
         <hr />
     </div>
 </div>
@@ -54,16 +60,17 @@
                 {
                     <div class="card">
                         <div class="card-body">
-                            <h1 class="card-title">
-                                @Html.DisplayFor(modelItem => item.Job.Name)
-                            </h1>
-                            <h3 class="card-text">
+                            <div class="card-title">
+                                <h4>@Html.DisplayFor(modelItem => item.Job.Name), @Html.DisplayFor(modelItem => item.Department.Name) </h4>
+                                <span class="badge badge-success">@Html.DisplayFor(modelItem => item.Status)</span>
+                            </div>
+                            <h6 class="card-text">
                                 <span style="padding-right:10px;"><i class="fas fa-map-marker-alt"></i></span>@Html.DisplayFor(modelItem => item.Branch.Address)
-                            </h3>
+                            </h6>
                         </div>
                         <div class="card-footer">
                             <form>
-                                <button class="btn btn-primary" asp-area="Customer" asp-controller="Contact" asp-action="Index">Details</button>
+                                <button class="btn btn-primary p-2" asp-controller="Careerwithus" asp-action="Details" asp-route-id="@item.Id">Details</button>
                             </form>
                         </div>
                     </div>
