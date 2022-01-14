@@ -126,3 +126,61 @@ img.director-board-img {
     align-items: center;
     padding: 0;
 }
+
+.years {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    position: relative;
+}
+
+.years h2 {
+    font-size: 6em;
+    text-align: right;
+    margin: 0;
+    margin-top: -1rem;
+    padding-left: 5rem;
+    padding-right: 1rem;
+    font-weight: 500;
+}
+
+.years p {
+    width: 30rem!important;
+    padding-left: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1em;
+    line-height: 2.4rem;
+    font-weight: 300;
+}
+
+.years::after {
+    content: '';
+    background-image: url('../../../images/Client/About/year.png');
+    width: 2rem;
+    height: 9rem;
+    position: absolute;
+    bottom: -4.5rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.years:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.years:nth-child(even) h2 {
+    text-align: left;
+    padding-right: 5rem;
+    padding-left: 1rem;
+}
+
+.years:nth-child(even) p {
+    text-align: right;
+}
+
+.years:nth-last-child(1)::after {
+    background-image: none;
+}

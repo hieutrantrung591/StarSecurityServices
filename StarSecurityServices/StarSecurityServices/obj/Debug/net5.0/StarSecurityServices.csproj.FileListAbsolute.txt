@@ -1570,3 +1570,4 @@ D:\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net
 D:\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\StarSecurityServices.pdb
 D:\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\StarSecurityServices.genruntimeconfig.cache
 D:\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Customer\Views\Careerwithus\Index.cshtml.g.cs
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Customer\Views\Careerwithus\Index.cshtml.g.cs
