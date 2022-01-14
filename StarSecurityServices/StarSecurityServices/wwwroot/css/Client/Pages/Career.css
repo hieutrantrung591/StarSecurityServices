@@ -13,8 +13,7 @@
 
 .badge {
     padding: 0.75rem 1rem;
-    margin-bottom: 1rem;
-    margin-left: 1.5rem;
+    margin: 0 1.5rem;
     font-size: 0.875em;
     font-weight: 500;
 }
@@ -22,6 +21,7 @@
 .card-title {
     display: flex;
     flex-direction: row;
+    margin: 0;
 }
 
 .btn-big {
@@ -29,8 +29,9 @@
 }
 
 .job-title {
-    font-size: 2em;
-    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-top: 0;
     line-height: 120%;   
 }
@@ -41,4 +42,43 @@
 
 .job-description {
     margin: 3rem 0;
+}
+
+.job-img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.job-img::before {
+    position: absolute;
+    content: "";
+    background: #020e2a;
+    width: 100%;
+    height: 100%;
+    left: -2.5rem;
+    top: 2.5rem;
+    z-index: -1;
+}
+
+.career-area {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+.career-benefits {
+    padding-right: 4rem;
+}
+
+.job-list-item {
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+.button {
+    padding: 0 1rem;
 }

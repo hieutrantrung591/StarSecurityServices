@@ -80,11 +80,23 @@
         $(document).ready(function () {
             $('#summernote').summernote({
                 fontNames: ['Poppins'],
+                fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '24', '28', '32', '36', '48', '64', '82', '150'],
                 styleTags: ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
                 height: 300,                 // set editor height
                 minHeight: null,             // set minimum height of editor
                 maxHeight: null,             // set maximum height of editor
-                focus: true                  // set focus to editable area after initializing summernote
+                focus: true,                 // set focus to editable area after initializing summernote
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['fontname', ['fontname']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']],
+                ],
             });
 
             $('.dropdown-toggle').dropdown()

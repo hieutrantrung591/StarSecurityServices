@@ -24,7 +24,10 @@
 
 <div class="container job-area">
     <div>
-        <p class="job-title">@Html.DisplayFor(model => model.Job.Name), @Html.DisplayFor(model => model.Department.Name)</p>
+        <div class="job-title">
+            <span class="h2">@Html.DisplayFor(model => model.Job.Name), @Html.DisplayFor(model => model.Department.Name)</span>
+            <span class="badge badge-success">@Html.DisplayFor(model => model.Status)</span>
+        </div>
         <p class="job-branch">@Html.DisplayFor(model => model.Branch.Address)</p>
     </div>
 

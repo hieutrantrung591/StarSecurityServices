@@ -29,15 +29,7 @@
     </div>
 </div>
 
-<div class="banner">
-    <div class="container py-5 search">
-        <h4>Find Your Dream Careers</h4>
-        <h6>Get insights such as salaries, interviews, and skills for your dream career</h6>
-        <hr />
-    </div>
-</div>
-
-<div class="container">
+<div class="container career-area">
     <div class="row">
         <div class="col-md-3">
             <form asp-action="Index" method="get">
@@ -58,19 +50,22 @@
             {
                 @foreach (var item in Model)
                 {
-                    <div class="card">
+                    <div class="card job-list-item">
                         <div class="card-body">
                             <div class="card-title">
-                                <h4>@Html.DisplayFor(modelItem => item.Job.Name), @Html.DisplayFor(modelItem => item.Department.Name) </h4>
-                                <span class="badge badge-success">@Html.DisplayFor(modelItem => item.Status)</span>
+                                <div class="job-title">
+                                    <span class="h4">@Html.DisplayFor(modelItem => item.Job.Name), @Html.DisplayFor(modelItem => item.Department.Name)</span>
+                                    <span class="badge badge-success">@Html.DisplayFor(modelItem => item.Status)</span>
+                                </div>
                             </div>
-                            <h6 class="card-text">
-                                <span style="padding-right:10px;"><i class="fas fa-map-marker-alt"></i></span>@Html.DisplayFor(modelItem => item.Branch.Address)
-                            </h6>
+                            <div class="card-text">
+                                <i class="fas fa-map-marker-alt"></i>
+                                @Html.DisplayFor(modelItem => item.Branch.Address)
+                            </div>
                         </div>
                         <div class="card-footer">
                             <form>
-                                <button class="btn btn-primary p-2" asp-controller="Careerwithus" asp-action="Details" asp-route-id="@item.Id">Details</button>
+                                <button class="btn btn-primary button" asp-controller="Careerwithus" asp-action="Details" asp-route-id="@item.Id">Details</button>
                             </form>
                         </div>
                     </div>
@@ -81,6 +76,23 @@
                 <ul class="pagination">
                     <pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="Branches" asp-action="Index" />
                 </ul>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row pt-5">
+        <div class="col-md-7">
+            <div class="career-benefits">
+                <h4>Find Your Dream Careers</h4>
+                <p>At Star, we believe that human resource is the most valuable asset of the company. We possess an excellent blend of professionals from diverse backgrounds including senior managers from industry as well as ex-police and armed forces. With the average age of Star’s managers 35 years makes the company’s environment dynamic and motivated.</p>
+                <p>
+                    Being a rapidly growing enterprise, Star is always looking for professionally qualified and energetic individuals with the caliber to grow and excel. The Company offers a large number of employment opportunities in its management team for a variety of people ranging from fresh graduates to experienced professionals from industry and the uniformed services. Star provides excellent growth opportunities for a lifelong career. Many officers from this permanent cadre are in senior management positions today.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="job-img">
+                <img src="~/images/Client/About/employee-benefits-strategy.jpg" style="max-width: 100%; height: auto;" />
             </div>
         </div>
     </div>

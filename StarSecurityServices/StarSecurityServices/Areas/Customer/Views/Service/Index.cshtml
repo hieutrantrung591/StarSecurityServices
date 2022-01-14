@@ -1,9 +1,13 @@
-﻿
-@{
-    ViewData["Title"] = "Service";
-    Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml";
+﻿@model StarSecurityServices.Areas.Customer.ViewModels.ServiceDivisionViewModel
+
+@{ ViewData["Title"] = "Service";
+                Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml"; }
+
+@section Styles {
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/Client/Pages/Service.css" >
 }
-<link href="~/css/Client/Utils/common.css" rel="stylesheet" />
 
 <div class="breadcrumb-area">
     <div class="container">
@@ -17,139 +21,43 @@
     </div>
 </div>
 
-@* Manned guarding   *@
 <div class="service-section pt-5">
     <div class="container">
-        <h3>Manned guarding</h3>
-        <p>
-            Manned guarding: The service portfolio of this division includes
-            guarding, fire squad, dog squad, bodyguards etc. for industries,
-            banks, retail outlets, residential colonies, hotels and institutions
-        </p>
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="service-item">
-                    <img src="~/images/Client/Service/service-1.jpg" style="max-width:100%; height: auto;border-radius:5px;" />
-                    <div class="service-details mt-2">
-                        <h4><a class="text-dark" href="#">Guarding</a></h4>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis.</p>
+        @foreach (var division in Model.Divisions)
+        {
+            <div class="card shadow">
+                <div class="card-body">
+                    <div class="division-title">@division.Name</div>
+                    <div class="service-list">
+                        @foreach (var item in Model.Services)
+                        {
+                            @if (item.DivisionId == division.Id)
+                            {
+                                <ul>
+                                    <li>
+                                        <div class="service-name">
+                                            <i class="fa fa-angle-double-right"></i>
+                                            @Html.DisplayFor(modelItem => item.Name)
+                                        </div>
+                                    </li>
+                                </ul>
+                            }
+                        }
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="service-item">
-                    <img src="~/images/Client/Service/service-1.jpg" style="max-width:100%; height: auto;border-radius:5px;" />
-                    <div class="service-details mt-2">
-                        <h4><a class="text-dark" href="#">Fire squad</a></h4>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="service-item">
-                    <img src="~/images/Client/Service/service-1.jpg" style="max-width:100%; height: auto;border-radius:5px;" />
-                    <div class="service-details mt-2">
-                        <h4><a class="text-dark" href="#">Dog squad</a></h4>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="service-item">
-                    <img src="~/images/Client/Service/service-1.jpg" style="max-width:100%; height: auto;border-radius:5px;" />
-                    <div class="service-details mt-2">
-                        <h4><a class="text-dark" href="#">Bodyguards</a></h4>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="service-item">
-                    <img src="~/images/Client/Service/service-1.jpg" style="max-width:100%; height: auto;border-radius:5px;" />
-                    <div class="service-details mt-2">
-                        <h4><a class="text-dark" href="#">Office Security</a></h4>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="service-item">
-                    <img src="~/images/Client/Service/service-1.jpg" style="max-width:100%; height: auto;border-radius:5px;" />
-                    <div class="service-details mt-2">
-                        <h4><a class="text-dark" href="#">Office Security</a></h4>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+         }
     </div>
 </div>
 
-@* Cash Services   *@
-<div class="service-section pt-5">
-    <div class="container">
-        <h3>Cash Services</h3>
-        <p>
-            Cash Services: The service range of the Cash Services division
-            includes secured transfer of cash and valuables, ATM
-            replenishment, Vaulting and Processing Services, multi-point
-            cash collection and Caretaker Services
-        </p>
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="service-item">
-                    <img src="~/images/Client/Service/service-1.jpg" style="max-width:100%; height: auto;border-radius:5px;" />
-                    <div class="service-details mt-2">
-                        <h4><a class="text-dark" href="#">Guarding</a></h4>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="service-item">
-                    <img src="~/images/Client/Service/service-1.jpg" style="max-width:100%; height: auto;border-radius:5px;" />
-                    <div class="service-details mt-2">
-                        <h4><a class="text-dark" href="#">Fire squad</a></h4>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="service-item">
-                    <img src="~/images/Client/Service/service-1.jpg" style="max-width:100%; height: auto;border-radius:5px;" />
-                    <div class="service-details mt-2">
-                        <h4><a class="text-dark" href="#">Dog squad</a></h4>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="service-item">
-                    <img src="~/images/Client/Service/service-1.jpg" style="max-width:100%; height: auto;border-radius:5px;" />
-                    <div class="service-details mt-2">
-                        <h4><a class="text-dark" href="#">Bodyguards</a></h4>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="service-item">
-                    <img src="~/images/Client/Service/service-1.jpg" style="max-width:100%; height: auto;border-radius:5px;" />
-                    <div class="service-details mt-2">
-                        <h4><a class="text-dark" href="#">Office Security</a></h4>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="service-item">
-                    <img src="~/images/Client/Service/service-1.jpg" style="max-width:100%; height: auto;border-radius:5px;" />
-                    <div class="service-details mt-2">
-                        <h4><a class="text-dark" href="#">Office Security</a></h4>
-                        <p>Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="container service-img">
+    <div class="image">
+        <img src="~/images/Client/Service/service-1.jpg" />
+    </div>
+    <div class="image">
+        <img src="~/images/Client/Service/service-2.jpg" />
+    </div>
+    <div class="image">
+        <img src="~/images/Client/Service/service-3.jpg" />
     </div>
 </div>

@@ -29,9 +29,6 @@
                         <th>
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Job)
                         </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.FirstOrDefault().Description)
-                        </th>
                         <th class="text-center">
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Number)
                         </th>
@@ -60,9 +57,6 @@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Job.Name)
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Description)
-                                </td>
                                 <td class="text-center">
                                     @Html.DisplayFor(modelItem => item.Number)
                                 </td>
@@ -79,9 +73,9 @@
                                 <td>
                                     <div class="d-flex flex-row action-list">
                                         <form>
-                                            <button class="btn btn-warning p-2" asp-action="Edit" asp-route-id="@item.Id">Edit</button>
-                                            <button class="btn btn-info p-2" asp-action="Details" asp-route-id="@item.Id">Details</button>
-                                            <button class="btn btn-danger p-2" asp-action="Delete" asp-route-id="@item.Id">Delete</button>
+                                            <button class="btn btn-warning btn-action" asp-action="Edit" asp-route-id="@item.Id">Edit</button>
+                                            <button class="btn btn-info btn-action" asp-action="Details" asp-route-id="@item.Id">Details</button>
+                                            <button class="btn btn-danger btn-action" asp-action="Delete" asp-route-id="@item.Id">Delete</button>
                                         </form>
                                     </div>
                                 </td>

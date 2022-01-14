@@ -13075,64 +13075,6 @@ dl li {
   color: #fed713;
 }
 
-.gradient-bullet-list {
-  padding-left: 0;
-}
-
-.rtl .gradient-bullet-list {
-  padding-right: 0;
-}
-
-.gradient-bullet-list li {
-  position: relative;
-  list-style-type: none;
-  padding-left: 25px;
-  line-height: 1;
-  padding-bottom: 25px;
-}
-
-.gradient-bullet-list li:before, .gradient-bullet-list li:after {
-  content: "";
-  position: absolute;
-}
-
-.gradient-bullet-list li:before {
-  top: 0;
-  left: 0;
-  width: 15px;
-  height: 15px;
-  border-radius: 100%;
-}
-
-.gradient-bullet-list li:after {
-  width: 11px;
-  height: 11px;
-  top: 2px;
-  left: 2px;
-  background: #ffffff;
-  border-radius: 100%;
-}
-
-.gradient-bullet-list li:nth-child(1):before {
-  background: linear-gradient(to right, #ffbf96, #fe7096);
-}
-
-.gradient-bullet-list li:nth-child(2):before {
-  background: linear-gradient(to right, #90caf9, #047edf 99%);
-}
-
-.gradient-bullet-list li:nth-child(3):before {
-  background: linear-gradient(to right, #f6e384, #ffd500);
-}
-
-.gradient-bullet-list li:nth-child(4):before {
-  background: linear-gradient(to right, #84d9d2, #07cdae);
-}
-
-.gradient-bullet-list li:nth-child(5):before {
-  background: linear-gradient(to right, #da8cff, #9a55ff);
-}
-
 /* Preview */
 .preview-list .preview-item {
   display: -webkit-flex;
@@ -13411,4 +13353,18 @@ li.nav-title p {
 
 p.text-secondary {
     font-size: 1.4rem;
+}
+
+.btn-action {
+    padding: 0.5rem 1rem;
+}
+
+.branch-card:nth-child(odd) {
+    padding-left: 4rem;
+    padding-right: 1rem;
+}
+
+.branch-card:nth-child(even) {
+    padding-left: 1rem;
+    padding-right: 4rem;
 }
