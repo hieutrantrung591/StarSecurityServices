@@ -20,12 +20,63 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+.home {
+    min-height: 100vh;
+   /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;*/
+    background: url(/images/Client/Home/slide-4.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 9rem;
+}
+.home .content {
+    padding: 5rem;
+    flex: 1 1 40rem;
+   
+}
 
-section {
+.home .content h2 {
+    font-size: 4.5rem;
+    color: #fff;
+    text-transform:uppercase;
+}
+    .home .content h2 span {
+        font-size: 4.5rem;
+        color: #EDBB00;
+        text-transform: uppercase;
+       
+    }
+.home .content h3 {
+    font-size: 2rem;
+    color: #fff;
+    text-transform:uppercase;
+}
+
+    .home .content button {
+        padding: .8rem 2rem;
+        background-color: #EDBB00;
+        border-radius: 5px;
+        border: none;
+        margin-top: 10px;
+    }
+   
+    .home .content button a {
+        color:#fff;
+        text-decoration: none;
+        font-weight:bold;
+        text-transform:uppercase;
+    }
+.features section {
     padding: 2rem 9%;
 }
 
-header .carousel-inner .item {
+#carousel-item{
+    height:600px;
+}
+/*header .carousel-inner .item {
     height: 100vh;
 }
 
@@ -102,10 +153,9 @@ header .carousel-inner .item {
 .carousel-indicators .active {
     background-color: #EDBB00;
     border-color: #EDBB00;
-}
+}*/
 /*responsive css*/
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+/*@media only screen and (min-width: 768px) and (max-width: 991px) {
     .carousel-caption {
         padding-bottom: 350px;
     }
@@ -143,8 +193,7 @@ header .carousel-inner .item {
         .carousel-caption a {
             padding: 10px 25px;
         }
-}
-
+}*/
 .features .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
