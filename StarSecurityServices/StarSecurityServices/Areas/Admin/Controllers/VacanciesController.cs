@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -56,6 +57,9 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 return NotFound();
             }
 
+            Console.WriteLine(Thread.CurrentThread.CurrentCulture.Name);
+            Console.WriteLine(DateTime.Now);
+            Console.WriteLine(System.Globalization.CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern);
             return View(vacancy);
         }
 

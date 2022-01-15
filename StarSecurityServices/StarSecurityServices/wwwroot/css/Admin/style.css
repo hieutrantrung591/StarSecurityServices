@@ -626,8 +626,8 @@ pre code {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
 }
 
 .col {
@@ -4303,7 +4303,7 @@ input[type="button"].btn-block {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.3125rem;
+  border-radius: 0.35rem;
 }
 
 .card > hr {
@@ -13359,12 +13359,46 @@ p.text-secondary {
     padding: 0.5rem 1rem;
 }
 
-.branch-card:nth-child(odd) {
-    padding-left: 4rem;
-    padding-right: 1rem;
+.border-left-primary {
+    border-left: 0.4rem solid #4e73df !important;
 }
 
-.branch-card:nth-child(even) {
-    padding-left: 1rem;
-    padding-right: 4rem;
+.border-left-purple {
+    border-left: 0.4rem solid #b66dff !important;
+}
+
+.border-left-aqua {
+    border-left: 0.4rem solid #36b9cc !important;
+}
+
+.border-left-yellow {
+    border-left: 0.4rem solid #EDBB00 !important;
+}
+
+.border-left-red {
+    border-left: 0.4rem solid #fe7c96 !important;
+}
+
+.text-card-title {
+    font-size: 90%;
+    font-weight: 600;
+}
+
+.text-blue {
+    color: #4e73df !important;
+}
+
+.text-aqua {
+    color: #36b9cc !important;
+}
+
+.text-yellow {
+    color: #EDBB00 !important;
+}
+
+.text-hint {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 90%;
+    padding-top: 1rem;
 }

@@ -1,4 +1,5 @@
-﻿
+﻿@model StarSecurityServices.Areas.Admin.ViewModels.DashboardViewModel
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
@@ -11,6 +12,167 @@
     <!-- custom css -->
     <link rel="stylesheet" href="~/css/Admin/style.css" />
 }
+
+<div class="container-fluid">
+    <div class="row mb-5">
+        <div class="col-xl-3 col-md-6">
+            <div class="card border-left-primary shadow">
+                <div class="card-body">
+                    <div class="text-xl-start text-card-title text-blue text-uppercase mb-1">
+                        Number of Employees
+                    </div>
+                    <div class="h4 mb-0 font-weight-bold">
+                        @Model.EmployeeCount
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card border-left-primary shadow">
+                <div class="card-body">
+                    <div class="text-xl-start text-card-title text-blue text-uppercase mb-1">
+                        Number of Roles
+                    </div>
+                    <div class="h4 mb-0 font-weight-bold">
+                        @Model.RoleCount
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card border-left-primary shadow">
+                <div class="card-body">
+                    <div class="text-xl-start text-card-title text-blue text-uppercase mb-1">
+                        Number of Role Assignments
+                    </div>
+                    <div class="h4 mb-0 font-weight-bold">
+                        @Model.EmployeeRoleCount
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-xl-3 col-md-6">
+            <div class="card border-left-purple shadow">
+                <div class="card-body">
+                    <div class="text-xl-start text-card-title text-primary text-uppercase mb-1">
+                        Number of Departments
+                    </div>
+                    <div class="h4 mb-0 font-weight-bold">
+                        @Model.DepartmentCount
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card border-left-purple shadow">
+                <div class="card-body">
+                    <div class="text-xl-start text-card-title text-primary text-uppercase mb-1">
+                        Number of Jobs
+                    </div>
+                    <div class="h4 mb-0 font-weight-bold">
+                        @Model.JobCount
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card border-left-purple shadow">
+                <div class="card-body">
+                    <div class="text-xl-start text-card-title text-primary text-uppercase mb-1">
+                        Number of Vacancies
+                    </div>
+                    <div class="h4 mb-0 font-weight-bold">
+                        @Model.VacancyCount
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-xl-3 col-md-6">
+            <div class="card border-left-aqua shadow">
+                <div class="card-body">
+                    <div class="text-xl-start text-card-title text-aqua text-uppercase mb-1">
+                        Number of Branches
+                    </div>
+                    <div class="h4 mb-0 font-weight-bold">
+                        @Model.BranchCount
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card border-left-aqua shadow">
+                <div class="card-body">
+                    <div class="text-xl-start text-card-title text-aqua text-uppercase mb-1">
+                        Number of Regions
+                    </div>
+                    <div class="h4 mb-0 font-weight-bold">
+                        @Model.RegionCount
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-xl-3 col-md-6">
+            <div class="card border-left-yellow shadow">
+                <div class="card-body">
+                    <div class="text-xl-start text-card-title text-yellow text-uppercase mb-1">
+                        Number of Services
+                    </div>
+                    <div class="h4 mb-0 font-weight-bold">
+                        @Model.ServiceCount
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card border-left-yellow shadow">
+                <div class="card-body">
+                    <div class="text-xl-start text-card-title text-yellow text-uppercase mb-1">
+                        Number of Business Divisions
+                    </div>
+                    <div class="h4 mb-0 font-weight-bold">
+                        @Model.DivisionCount
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-xl-3 col-md-6">
+            <div class="card border-left-red shadow">
+                <div class="card-body">
+                    <div class="text-xl-start text-card-title text-danger text-uppercase mb-1">
+                        Number of Clients
+                    </div>
+                    <div class="h4 mb-0 font-weight-bold">
+                        @Model.ClientCount
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card border-left-red shadow">
+                <div class="card-body">
+                    <div class="text-xl-start text-card-title text-danger text-uppercase mb-1">
+                        Number of Clients' Services
+                    </div>
+                    <div class="h4 mb-0 font-weight-bold">
+                        @Model.ClientServiceCount
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section Scripts {
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
