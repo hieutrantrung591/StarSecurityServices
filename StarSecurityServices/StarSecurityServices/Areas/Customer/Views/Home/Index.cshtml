@@ -1,10 +1,13 @@
-﻿@{ 
+﻿@{
     ViewData["Title"] = "HomePage";
     Layout = "~/areas/Customer/views/shared/_LayoutHomepage.cshtml";
 }
-<link rel="stylesheet" href="~/css/Client/Pages/Home.css">
-<link rel="stylesheet" href="~/css/Client/Pages/About.css">
-<link rel="stylesheet" href="~/css/Client/Utils/common.css">
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Client/Pages/Home.css">
+    <link rel="stylesheet" href="~/css/Client/Pages/About.css">
+    <link rel="stylesheet" href="~/css/Client/Utils/common.css">
+}
 
 <section class="features" id="features">
     <h4 style="text-align:center;text-transform:uppercase;color:#EDBB00;font-weight:bold;">
@@ -231,13 +234,16 @@
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script>
-    $('#myCarousel').carousel({
-        interval: 10000,
-        wrap: true,
-        keyboard: true
-    });
-</script>
+    <script>
+        $('#myCarousel').carousel({
+            interval: 10000,
+            wrap: true,
+            keyboard: true
+        });
+    </script>
+
+}

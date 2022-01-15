@@ -16,6 +16,8 @@
 
     <link rel="stylesheet" href="~/css/Client/Pages/Home.css">
     <link href="~/css/Client/Utils/style.css" rel="stylesheet">
+
+    @await RenderSectionAsync("Styles", required: false)
 </head>
 
 <body>
@@ -52,7 +54,7 @@
                         <li>
                             <a class="nav-link text-dark" asp-area="Customer" asp-controller="Careerwithus" asp-action="Index">Careers With us</a>
                         </li>
-                          <li>
+                        <li>
                             <a class="nav-link text-dark" asp-area="Customer" asp-controller="Login" asp-action="Index"><i class="fas fa-user"></i></a>
                         </li>
                     </ul>
@@ -182,6 +184,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 
 </html>

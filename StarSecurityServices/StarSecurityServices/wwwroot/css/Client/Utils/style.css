@@ -70,7 +70,6 @@ h6, .h6 {
     font-size: 1em;
 }
 
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -159,6 +158,16 @@ li.nav-item > a:active {
 
 .nav-item {
     margin: 0 1rem;
+}
+
+.navbar-toggler-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-toggler {
+    padding: 0.5rem 0.75rem;
 }
 
 /*--------------------------------------------------------------
