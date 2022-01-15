@@ -184,3 +184,63 @@ img.director-board-img {
 .years:nth-last-child(1)::after {
     background-image: none;
 }
+
+@media only screen and (max-width: 991px) {
+    .years {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .years:after {
+        bottom: -9rem;
+        left: 50%;
+    }
+
+    .years img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .years h2 {
+        text-align: center;
+        margin-top: 1rem;
+        padding: 0;
+    }
+
+    .years p {
+        width: auto;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .years + .years {
+        margin-top: 10rem;
+    }
+
+    .years:nth-child(even) h2 {
+        text-align: center;
+        margin-top: 10px;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .years h2 {
+        font-size: 4em;
+        line-height: 5rem;
+    }
+
+    .years:nth-child(even) {
+        flex-direction: column; 
+    }
+
+    .years + .years {
+        margin-top: 5rem;
+    }
+
+    .years:nth-child(even) h2 {
+        text-align: center;
+        padding-right: 10px;
+        padding-left: 50px;
+    }
+}
