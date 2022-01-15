@@ -27,26 +27,6 @@
                             <h4>Branch Details</h4>
                             <hr />
 
-                            <div class="branch-list" style="display: none;">
-                                <ul class="list-group">
-                                    <li class="list-group-item">
-                                        <div style="display: none;" class="branch-position">@Model.GetDetailLatLong()</div>
-                                        <div class="branch-name">
-                                            <b>@Model.Name</b>
-                                        </div>
-                                        <div class="address">
-                                            @Model.Address
-                                        </div>
-                                        <div class="contact">
-                                            @Model.Phone
-                                        </div>
-                                        <div class="description">
-                                            @Model.Description
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
                             <form asp-action="Edit">
                                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                                 <input type="hidden" asp-for="Id" />
@@ -91,6 +71,26 @@
                                 </div>
                             </form>
                         </div>
+                    </div>
+
+                    <div class="branch-list" style="display: none;">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div style="display: none;" class="branch-position">@Model.GetDetailLatLong()</div>
+                                <div class="branch-name">
+                                    <b>@Model.Name</b>
+                                </div>
+                                <div class="address">
+                                    @Model.Address
+                                </div>
+                                <div class="contact">
+                                    @Model.Phone
+                                </div>
+                                <div class="description">
+                                    @Model.Description
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
