@@ -127,6 +127,10 @@ img.director-board-img {
     padding: 0;
 }
 
+.chairman-img img {
+    object-fit: cover;
+}
+
 .years {
     display: flex;
     flex-direction: row;
@@ -242,5 +246,9 @@ img.director-board-img {
         text-align: center;
         padding-right: 10px;
         padding-left: 50px;
+    }
+
+    .chairman-img img {
+        object-fit: cover;
     }
 }
