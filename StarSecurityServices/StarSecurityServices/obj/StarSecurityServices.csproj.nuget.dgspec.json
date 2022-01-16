@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Aptech\\Project 3\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj": {}
+    "E:\\C2002L\\.NET\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj": {}
   },
   "projects": {
-    "D:\\Aptech\\Project 3\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj": {
+    "E:\\C2002L\\.NET\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Aptech\\Project 3\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
+        "projectUniqueName": "E:\\C2002L\\.NET\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
         "projectName": "StarSecurityServices",
-        "projectPath": "D:\\Aptech\\Project 3\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
+        "projectPath": "E:\\C2002L\\.NET\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\Aptech\\Project 3\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\obj\\",
+        "outputPath": "E:\\C2002L\\.NET\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

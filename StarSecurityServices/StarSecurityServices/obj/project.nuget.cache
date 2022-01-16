@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fSjdN6Rg16CBZEBzSUAOiAgENh7CKVUvfVOvmRRpvEwXUzh61hd3SzXXpHG7Z2K3No4VPGeuFff29x5FMjMefQ==",
+  "dgSpecHash": "Cycfb+domDqjuDuhVd70au1eqtyN9Cn300lKVeGJmjyuOsteoGcTCMjtm74qJTZaORJ0TwJCCs4uSboxsZZGVQ==",
   "success": true,
-  "projectFilePath": "D:\\Aptech\\Project 3\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
+  "projectFilePath": "E:\\C2002L\\.NET\\Star_Security_Service\\StarSecurityServices\\StarSecurityServices\\StarSecurityServices.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
