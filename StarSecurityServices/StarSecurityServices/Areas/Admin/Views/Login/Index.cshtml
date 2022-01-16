@@ -1,35 +1,52 @@
-﻿
-    @{ ViewData["Title"] = "Contact Us";
-        Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml"; }
+﻿@model StarSecurityServices.Models.Employee
+@{ 
+    ViewData["Title"] = "Contact Us";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutBlank.cshtml"; 
+}
 
-<link rel="stylesheet" href="~/css/Client/Pages/login.css" />
+@section Styles {
+    <link rel="stylesheet" href="~/css/Admin/Pages/Login.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-<div class="row justify-content-md-center">
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-header">
-                Login
-            </div>
-            <div class="card-body">
-                @using (Html.BeginForm("Login", "Home", FormMethod.Post))
-                {
-                    @Html.AntiForgeryToken()
-                    <div class="form-group">
-                        @Html.LabelFor(m => m.Email)
-                        @Html.TextBoxFor(m => m.Email, "", new { @class = "form-control", @placeholder = "Email" })
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+}
 
-                    </div>
-                    <div class="form-group">
-                        @Html.LabelFor(m => m.Password)
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="submit" class="btn btn-primary" value="Login" />
-                    </div>
-                }
-            </div>
+<div class="login">
+    <div class="login__content">
+        <div class="login__img">
+            <img src="~/images/Client/Login/img-login.svg" alt="">
+        </div>
+
+        <div class="login__forms">
+            <form asp-action="Index" class="login__registre" id="login-in">
+                <h1 class="login__title">Sign In</h1>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label> <span class="text-danger">*</span>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label> <span class="text-danger">*</span>
+                    <input asp-for="Password" class="form-control" type="password"/>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Sign In" class="btn btn-primary login__button" />
+                </div>
+                <a href="#" class="login__forgot">Forgot password?</a>
+                <hr />
+
+                <div class="text-center">
+                    <span class="login__account">Don't have an Account ?</span>
+                    <span class="login__signin" id="sign-up">Sign Up</span>
+                </div>
+            </form>
         </div>
     </div>
 </div>
-

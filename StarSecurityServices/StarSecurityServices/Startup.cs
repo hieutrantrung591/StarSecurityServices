@@ -34,7 +34,7 @@ namespace StarSecurityServices
             {
                 options.Conventions.AddPageRoute("/Areas/Customer/Views/Home/Index", "");
             });
-            services.AddDbContext<StarSecurityDBContext>(options => options.UseSqlServer(stringConnectdb));
+            services.AddDbContext<StarSecurityDBContext>(options => options.UseSqlServer(stringConnectdb), ServiceLifetime.Scoped);
             services.AddSession();
             services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRanges.All }));
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
