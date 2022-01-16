@@ -13,20 +13,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\Areas\Customer\Views\_ViewImports.cshtml"
+#line 1 "D:\Star_Security_Service\StarSecurityServices\StarSecurityServices\Areas\Customer\Views\_ViewImports.cshtml"
 using StarSecurityServices;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\Areas\Customer\Views\_ViewImports.cshtml"
+#line 2 "D:\Star_Security_Service\StarSecurityServices\StarSecurityServices\Areas\Customer\Views\_ViewImports.cshtml"
 using StarSecurityServices.Models;
 
 #line default
 #line hidden
 #nullable disable
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d9a1805292e3d2f325234186081dac28c4573f57", @"/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a3566da6923131c24c09d8a0abc0467e9c2e185d", @"/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5c185ddd2af846ca9cdb3dba8d944c1eb2d61335", @"/Areas/Customer/Views/_ViewImports.cshtml")]
     public class Areas_Customer_Views_Shared__LayoutCustomer : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
@@ -85,7 +85,7 @@ using StarSecurityServices.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d9a1805292e3d2f325234186081dac28c4573f5713226", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a3566da6923131c24c09d8a0abc0467e9c2e185d13175", async() => {
                 WriteLiteral("\r\n    <meta charset=\"utf-8\">\r\n    <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\">\r\n\r\n    <meta");
                 BeginWriteAttribute("content", " content=\"", 160, "\"", 170, 0);
                 EndWriteAttribute();
@@ -131,12 +131,11 @@ using StarSecurityServices.Models;
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral(@"
 
-    <link rel=""stylesheet"" href=""https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"" integrity=""sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"" crossorigin=""anonymous"">
-
+    <link rel=""stylesheet"" href=""https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"" integrity=""sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"" crossorigin=""anonymous"">
     <link rel=""stylesheet"" href=""https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"">
 
     ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "d9a1805292e3d2f325234186081dac28c4573f5717150", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a3566da6923131c24c09d8a0abc0467e9c2e185d17096", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -255,9 +254,9 @@ using StarSecurityServices.Models;
                 }
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
-                WriteLiteral("\r\n\r\n    ");
+                WriteLiteral("\r\n\r\n   \r\n\r\n    ");
 #nullable restore
-#line 34 "D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\Areas\Customer\Views\Shared\_LayoutCustomer.cshtml"
+#line 35 "D:\Star_Security_Service\StarSecurityServices\StarSecurityServices\Areas\Customer\Views\Shared\_LayoutCustomer.cshtml"
 Write(await RenderSectionAsync("Styles", required: false));
 
 #line default
@@ -285,9 +284,9 @@ Write(await RenderSectionAsync("Styles", required: false));
             <nav class=""navbar navbar-expand-lg"">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d9a1805292e3d2f325234186081dac28c4573f5728186", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a3566da6923131c24c09d8a0abc0467e9c2e185d28126", async() => {
                     WriteLiteral("\r\n                    ");
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "d9a1805292e3d2f325234186081dac28c4573f5728470", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a3566da6923131c24c09d8a0abc0467e9c2e185d28410", async() => {
                     }
                     );
                     __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -332,7 +331,7 @@ Write(await RenderSectionAsync("Styles", required: false));
                     <ul class=""navbar-nav ml-auto"">
                         <li class=""nav-item"">
                             ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d9a1805292e3d2f325234186081dac28c4573f5731946", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a3566da6923131c24c09d8a0abc0467e9c2e185d31886", async() => {
                     WriteLiteral("Home");
                 }
                 );
@@ -353,7 +352,7 @@ Write(await RenderSectionAsync("Styles", required: false));
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d9a1805292e3d2f325234186081dac28c4573f5733792", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a3566da6923131c24c09d8a0abc0467e9c2e185d33732", async() => {
                     WriteLiteral("About Us");
                 }
                 );
@@ -374,7 +373,7 @@ Write(await RenderSectionAsync("Styles", required: false));
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d9a1805292e3d2f325234186081dac28c4573f5735642", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a3566da6923131c24c09d8a0abc0467e9c2e185d35582", async() => {
                     WriteLiteral("Our Business");
                 }
                 );
@@ -395,7 +394,7 @@ Write(await RenderSectionAsync("Styles", required: false));
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d9a1805292e3d2f325234186081dac28c4573f5737496", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a3566da6923131c24c09d8a0abc0467e9c2e185d37436", async() => {
                     WriteLiteral("Our Network");
                 }
                 );
@@ -416,7 +415,7 @@ Write(await RenderSectionAsync("Styles", required: false));
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d9a1805292e3d2f325234186081dac28c4573f5739349", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a3566da6923131c24c09d8a0abc0467e9c2e185d39289", async() => {
                     WriteLiteral("Careers with us");
                 }
                 );
@@ -437,7 +436,7 @@ Write(await RenderSectionAsync("Styles", required: false));
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        </li>\r\n                        <li class=\"nav-item\">\r\n                            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d9a1805292e3d2f325234186081dac28c4573f5741206", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a3566da6923131c24c09d8a0abc0467e9c2e185d41146", async() => {
                     WriteLiteral("Contact Us");
                 }
                 );
@@ -459,7 +458,7 @@ Write(await RenderSectionAsync("Styles", required: false));
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                        </li>\r\n                    </ul>\r\n                </div><!-- /.navbar-collapse -->\r\n            </nav>\r\n        </div>\r\n    </header>\r\n    <!-- End Header -->\r\n\r\n    <main id=\"main\">\r\n        ");
 #nullable restore
-#line 80 "D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\Areas\Customer\Views\Shared\_LayoutCustomer.cshtml"
+#line 81 "D:\Star_Security_Service\StarSecurityServices\StarSecurityServices\Areas\Customer\Views\Shared\_LayoutCustomer.cshtml"
    Write(RenderBody());
 
 #line default
@@ -476,7 +475,7 @@ Write(await RenderSectionAsync("Styles", required: false));
 
                     <div class=""col-lg-3 col-md-6 footer-contact"">
                         ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "d9a1805292e3d2f325234186081dac28c4573f5743749", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a3566da6923131c24c09d8a0abc0467e9c2e185d43672", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -549,14 +548,14 @@ Write(await RenderSectionAsync("Styles", required: false));
     <!-- End Footer -->
 
     <a href=""#"" class=""back-to-top d-flex align-items-center justify-content-center""><i class=""bi bi-arrow-up-short""><");
-                WriteLiteral(@"/i></a>
+                WriteLiteral("/i></a>\r\n\r\n    <!-- Vendor JS Files -->\r\n");
+                WriteLiteral(@"    <script src=""https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"" integrity=""sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"" crossorigin=""anonymous""></script>
+    <script src=""https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"" integrity=""sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"" crossorigin=""anonymous""></script>
+    <script src=""https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"" integrity=""sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"" crossorigin=""anonymous""></script>
 
-    <!-- Vendor JS Files -->
-    <script src=""https://code.jquery.com/jquery-3.3.1.slim.min.js"" integrity=""sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"" crossorigin=""anonymous""></script>
-    <script src=""https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"" integrity=""sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"" crossorigin=""anonymous""></script>
-    <script src=""https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"" integrity=""sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"" crossorigin=""anonymous""></script>
 
     <script>
+
         var header = $('.header');
 
         $(window).scroll(function (e) {
@@ -571,7 +570,7 @@ Write(await RenderSectionAsync("Styles", required: false));
     </script>
     ");
 #nullable restore
-#line 165 "D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\Areas\Customer\Views\Shared\_LayoutCustomer.cshtml"
+#line 171 "D:\Star_Security_Service\StarSecurityServices\StarSecurityServices\Areas\Customer\Views\Shared\_LayoutCustomer.cshtml"
 Write(await RenderSectionAsync("Scripts", required: false));
 
 #line default
