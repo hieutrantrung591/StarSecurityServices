@@ -21,21 +21,23 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 .home {
-    min-height: 100vh;
-   /* display: flex;
+    min-height: 50vh;
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;*/
-    background: url(/images/Client/Home/slide-4.jpg) no-repeat;
+    flex-wrap: wrap;
+    background: url(/images/Client/Home/slide-3.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding-top: 9rem;
 }
 .home .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 5rem;
     flex: 1 1 40rem;
-   
 }
 
 .home .content h2 {
@@ -251,4 +253,109 @@ p.customer-review {
 .user-img img {
     border-radius: 50%;
     margin: 0 2rem;
+}
+
+.counter-bg {
+    position: relative;
+    background: #fff;
+    box-shadow: -1px -1px 5px 5px rgb(8 24 69 / 10%);
+    width: 98%;
+}
+
+.counter-bg:before {
+    background: #E6BF36;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 20px;
+    bottom: -20px;
+    content: "";
+    z-index: -1;
+    box-shadow: -1px -1px 5px 5px rgb(8 24 69 / 10%);
+}
+
+.counter-box {
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.counter-box i {
+    color: #E6BF36;
+    font-size: 2.5em;
+    margin: 15px 0;
+}
+
+.counter-box h2 {
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+}
+
+.counter-box p {
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+section {
+    padding: 3rem 0;
+}
+
+.counter-area {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+}
+
+.why-choose.why-choos-bg {
+    background: #fab909 none repeat scroll 0 0;
+    background-image: url(../../../images/Client/Home/why-choose-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-choose-us-before {
+    position: relative;
+    z-index: 2;
+}
+
+.why-choose-us-before {
+    padding-top: 6rem;
+}
+
+.why-choose-us-before .sec-title {
+    margin: 0;
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+.why-choose-us-before .why-choose-item {
+    margin-bottom: 6rem;
+}
+
+.why-choose-icon {
+    margin-bottom: 3rem;
+}
+
+.why-choose-item h2 {
+    font-size: 1.25em;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.why-choose-item .media-body p {
+    margin-bottom: 0;
+}
+
+.why-choose-us-before::before {
+    background-color: #ddd;
+    content: "";
+    height: 120%;
+    left: -20px;
+    position: absolute;
+    top: 0;
+    width: 5000px;
+    z-index: -1;
 }

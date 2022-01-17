@@ -270,7 +270,7 @@ namespace StarSecurityServices.Models
 
                 entity.Property(e => e.Qualification)
                     .IsRequired()
-                    .HasMaxLength(20)
+                    .HasMaxLength(255)
                     .IsUnicode(false)
                     .HasColumnName("qualification");
 
