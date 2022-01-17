@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
@@ -12,7 +13,6 @@ namespace StarSecurityServices.Models
         public Employee()
         {
             Clients = new HashSet<Client>();
-            EmployeeRoles = new HashSet<EmployeeRole>();
         }
 
         public int Id { get; set; }
@@ -53,10 +53,19 @@ namespace StarSecurityServices.Models
         [DisplayName("Branch")]
         public int BranchId { get; set; }
 
+        [Required]
+        [DisplayName("Role")]
+        public int RoleId { get; set; }
+
+        [NotMapped]
+        [Required]
+        [System.ComponentModel.DataAnnotations.Compare("Password")]
+        public string ConfirmPassword { get; set; }
+
         public virtual Branch Branch { get; set; }
         public virtual Department Department { get; set; }
         public virtual Job Job { get; set; }
+        public virtual Role Role { get; set; }
         public virtual ICollection<Client> Clients { get; set; }
-        public virtual ICollection<EmployeeRole> EmployeeRoles { get; set; }
     }
 }

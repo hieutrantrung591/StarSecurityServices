@@ -10,13 +10,14 @@ namespace StarSecurityServices.Models
     {
         public Role()
         {
-            EmployeeRoles = new HashSet<EmployeeRole>();
+            Employees = new HashSet<Employee>();
         }
 
         public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }
-        public virtual ICollection<EmployeeRole> EmployeeRoles { get; set; }
+
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }

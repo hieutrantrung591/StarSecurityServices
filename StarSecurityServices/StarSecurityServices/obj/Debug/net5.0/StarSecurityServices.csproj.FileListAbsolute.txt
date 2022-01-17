@@ -1,5 +1,6 @@
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\appsettings.Development.json
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\appsettings.json
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\StarSecurityServices.StaticWebAssets.xml
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\StarSecurityServices.exe
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\StarSecurityServices.deps.json
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\StarSecurityServices.runtimeconfig.json
@@ -101,7 +102,6 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
@@ -291,6 +291,8 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
@@ -308,6 +310,7 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Identity.Client.dll
@@ -442,16 +445,6 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Divisions\Details.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Divisions\Edit.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Divisions\Index.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\EmployeeRoles\Create.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\EmployeeRoles\Delete.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\EmployeeRoles\Details.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\EmployeeRoles\Edit.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\EmployeeRoles\Index.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Create.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Delete.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Details.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Edit.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Index.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Jobs\Create.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Jobs\Delete.cshtml.g.cs
@@ -481,9 +474,9 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutClientService.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutDepartment.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutDivision.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutEmployeeRole.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutEmployees.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutJob.cshtml.g.cs
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutLogin.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutRegion.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutRole.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutService.cshtml.g.cs
@@ -502,7 +495,6 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Customer\Views\Careerwithus\Index.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Customer\Views\Contact\Index.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Customer\Views\Home\Index.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Customer\Views\Login\Index.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Customer\Views\Service\Index.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Customer\Views\Shared\Error.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Customer\Views\Shared\_LayoutCustomer.cshtml.g.cs
@@ -523,5 +515,5 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\ref\StarSecurityServices.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\StarSecurityServices.pdb
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\StarSecurityServices.genruntimeconfig.cache
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LayoutBlank.cshtml.g.cs
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\Login.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\StarSecurityServices.csproj.AssemblyReference.cache

@@ -30,6 +30,12 @@
                         @Html.DisplayFor(model => model.Email)
                     </dd>
                     <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Password)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Password)
+                    </dd>
+                    <dt class="col-sm-2">
                         @Html.DisplayNameFor(model => model.Address)
                     </dt>
                     <dd class="col-sm-10">
@@ -63,7 +69,7 @@
                         @Html.DisplayNameFor(model => model.Branch)
                     </dt>
                     <dd class="col-sm-10">
-                        @Html.DisplayFor(model => model.Branch.Address)
+                        @Html.DisplayFor(model => model.Branch.Name)
                     </dd>
                     <dt class="col-sm-2">
                         @Html.DisplayNameFor(model => model.Department)
@@ -75,17 +81,20 @@
                         @Html.DisplayNameFor(model => model.Job)
                     </dt>
                     <dd class="col-sm-10">
-                        @Html.DisplayFor(model => model.Job.Description)
+                        @Html.DisplayFor(model => model.Job.Name)
                     </dd>
                     <dt class="col-sm-2">
-                        @Html.DisplayNameFor(model => model.CreatedOn)
+                        @Html.DisplayNameFor(model => model.Role)
                     </dt>
                     <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Role.Name)
+                    </dd>
+                    <dd class="col-sm-10">
                         @{var createdDate = Model.CreatedOn.ToLocalTime()
-                                          .ToString(
-                                          CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern
-                                          + " "
-                                          + CultureInfo.CurrentUICulture.DateTimeFormat.LongTimePattern);
+                                                .ToString(
+                                                CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern
+                                                + " "
+                                                + CultureInfo.CurrentUICulture.DateTimeFormat.LongTimePattern);
                         }
                         @Html.DisplayFor(model => createdDate)
                     </dd>
@@ -94,10 +103,10 @@
                     </dt>
                     <dd class="col-sm-10">
                         @{var updatedDate = Model.UpdatedOn.ToLocalTime()
-                                            .ToString(
-                                            CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern
-                                            + " "
-                                            + CultureInfo.CurrentUICulture.DateTimeFormat.LongTimePattern);
+                                                  .ToString(
+                                                  CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern
+                                                  + " "
+                                                  + CultureInfo.CurrentUICulture.DateTimeFormat.LongTimePattern);
                         }
                         @Html.DisplayFor(model => updatedDate)
                     </dd>

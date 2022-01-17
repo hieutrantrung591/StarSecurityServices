@@ -33,9 +33,6 @@
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Email)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.FirstOrDefault().Contact)
-                        </th>
-                        <th>
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Branch)
                         </th>
                         <th>
@@ -43,6 +40,9 @@
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.FirstOrDefault().Job)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FirstOrDefault().Role)
                         </th>
                         <th>Action</th>
                     </tr>
@@ -64,9 +64,6 @@
                                     @Html.DisplayFor(modelItem => item.Email)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Contact)
-                                </td>
-                                <td>
                                     @Html.DisplayFor(modelItem => item.Branch.Name)
                                 </td>
                                 <td>
@@ -74,6 +71,9 @@
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Job.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Role.Name)
                                 </td>
                                 <td>
                                     <div class="d-flex flex-row action-list">

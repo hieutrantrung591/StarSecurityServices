@@ -1,7 +1,7 @@
-﻿@model StarSecurityServices.Models.Employee
-@{ 
+﻿@model StarSecurityServices.Areas.Admin.ViewModels.LoginViewModel
+@{
     ViewData["Title"] = "Contact Us";
-    Layout = "~/Areas/Admin/Views/Shared/_LayoutLogin.cshtml"; 
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutLogin.cshtml";
 }
 
 @section Styles {
@@ -21,9 +21,9 @@
         </div>
 
         <div class="login__forms">
-            <form asp-action="Index" class="login__registre" id="login-in">
+            <form asp-area="Admin" asp-controller="Home" asp-action="Login" method="post" class="login__registre" id="login-in">
                 <h1 class="login__title">Sign In</h1>
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div asp-validation-summary="ModelOnly" class="text-danger">@ViewBag.Error</div>
                 <div class="form-group">
                     <label asp-for="Email" class="control-label"></label> <span class="text-danger">*</span>
                     <input asp-for="Email" class="form-control" />
@@ -32,7 +32,7 @@
 
                 <div class="form-group">
                     <label asp-for="Password" class="control-label"></label> <span class="text-danger">*</span>
-                    <input asp-for="Password" class="form-control" type="password"/>
+                    <input asp-for="Password" class="form-control" type="password" />
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
 
