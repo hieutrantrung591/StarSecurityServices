@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -40,7 +41,7 @@
                     <li class="nav-item nav-profile">
                         <div class="nav-profile-text">
                             <span class="text-gray">Hi, </span>
-                            <span class="mb-1 text-black font-weight-bold">Admin</span>
+                            <span class="mb-1 text-black font-weight-bold">@Context.Session.GetString("EmployeeName")</span>
                         </div>
                     </li>
                 </ul>
@@ -156,6 +157,15 @@
                         <a class="nav-link" asp-area="Admin" asp-controller="ClientServices" asp-action="Index">
                             <span class="menu-title">Clients' Services</span>
                             <i class="mdi mdi-account-multiple menu-icon"></i>
+                        </a>
+                    </li>
+
+                    <!-- Divider -->
+                    <li class="border-bottom nav-title"></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout.html">
+                            <span class="menu-title">Logout</span>
+                            <i class="mdi mdi-logout-variant menu-icon"></i>
                         </a>
                     </li>
                 </ul>

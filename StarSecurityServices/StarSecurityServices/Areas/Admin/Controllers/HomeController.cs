@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace StarSecurityServices.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly StarSecurityDBContext _context;
@@ -57,7 +57,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         [AllowAnonymous]
         [Route("login.html", Name = "Login")]
         public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
@@ -67,6 +67,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 if (ModelState.IsValid)
                 {
                     Employee employee = _context.Employees
+                        .Include(p => p.Role)
                         .SingleOrDefault(p => p.Email.ToLower() == model.Email.ToLower().Trim());
 
                     if (employee == null)
@@ -83,20 +84,18 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                     }
 
                     // Login Success
-
-                    var employeeId = HttpContext.Session.GetString("EmployeeId");
-
                     // Identity
                     // Save Session
                     HttpContext.Session.SetString("EmployeeId", employee.Id.ToString());
+                    HttpContext.Session.SetString("EmployeeName", employee.Name);
 
                     var employeeClaims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, employee.Name),
                         new Claim(ClaimTypes.Email, employee.Email),
-                        new Claim("EmployeeId", employee.Id.ToString())
-                        // new Claim("RoleId", employee.EmployeeRoles.RoleId),
-                        // new Claim(ClaimTypes.Role, employee.EmployeeRoles.Role)
+                        new Claim("EmployeeId", employee.Id.ToString()),
+                        new Claim("RoleId", employee.RoleId.ToString()),
+                        new Claim(ClaimTypes.Role, employee.Role.Name)
                     };
 
                     var grandmaIdentity = new ClaimsIdentity(employeeClaims, "Employee Identity");
@@ -115,6 +114,21 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 return RedirectToAction("Login", "Home", new { Area = "Admin" });
             }
             return RedirectToAction("Login", "Home", new { Area = "Admin" });
+        }
+
+        [Route("logout.html", Name = "Logout")]
+        public IActionResult Logout()
+        {
+            try
+            {
+                HttpContext.SignOutAsync();
+                HttpContext.Session.Remove("EmployeeId");
+                return RedirectToAction("Index", "Home");
+            }
+            catch
+            {
+                return RedirectToAction("Index", "Home");
+            }               
         }
     }
 }

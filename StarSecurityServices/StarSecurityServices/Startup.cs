@@ -30,12 +30,12 @@ namespace StarSecurityServices
         public void ConfigureServices(IServiceCollection services)
         {
             var stringConnectdb = Configuration.GetConnectionString("StarSecurity");
+            services.AddSession();
             services.AddMvc().AddRazorPagesOptions(options =>
             {
                 options.Conventions.AddPageRoute("/Areas/Customer/Views/Home/Index", "");
             });
             services.AddDbContext<StarSecurityDBContext>(options => options.UseSqlServer(stringConnectdb), ServiceLifetime.Scoped);
-            services.AddSession();
             services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(allowedRanges: new[] { UnicodeRanges.All }));
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddMemoryCache();

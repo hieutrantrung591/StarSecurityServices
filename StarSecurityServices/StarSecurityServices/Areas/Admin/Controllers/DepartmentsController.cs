@@ -12,6 +12,7 @@ using StarSecurityServices.Models;
 namespace StarSecurityServices.Areas.Admin
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class DepartmentsController : Controller
     {
         private readonly StarSecurityDBContext _context;

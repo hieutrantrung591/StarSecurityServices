@@ -84,8 +84,6 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.AspNetCore.WebSockets.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.AspNetCore.WebUtilities.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.CSharp.dll
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Caching.Abstractions.dll
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Caching.Memory.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.Binder.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.CommandLine.dll
@@ -97,7 +95,6 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.Xml.dll
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -109,7 +106,6 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Http.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.dll
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Logging.Configuration.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Logging.Console.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Logging.Debug.dll
@@ -120,8 +116,6 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.ObjectPool.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Options.DataAnnotations.dll
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Options.dll
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.Primitives.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Extensions.WebEncoders.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.JSInterop.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\Microsoft.Net.Http.Headers.dll
@@ -220,7 +214,6 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\System.Resources.Reader.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\System.Resources.ResourceManager.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\System.Resources.Writer.dll
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\System.Runtime.CompilerServices.Unsafe.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\System.Runtime.CompilerServices.VisualC.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\System.Runtime.dll
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\refs\System.Runtime.Extensions.dll
@@ -451,7 +444,6 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Jobs\Details.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Jobs\Edit.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Jobs\Index.cshtml.g.cs
-D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Login\Index.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Regions\Create.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Regions\Delete.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Regions\Details.cshtml.g.cs
@@ -516,4 +508,16 @@ D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServi
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\StarSecurityServices.pdb
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\StarSecurityServices.genruntimeconfig.cache
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\Login.cshtml.g.cs
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Create.cshtml.g.cs
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Delete.cshtml.g.cs
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Details.cshtml.g.cs
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Edit.cshtml.g.cs
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\Razor\Areas\Admin\Views\Employees\Index.cshtml.g.cs
 D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\obj\Debug\net5.0\StarSecurityServices.csproj.AssemblyReference.cache
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\Aptech\Project 3\Star_Security_Service\StarSecurityServices\StarSecurityServices\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
