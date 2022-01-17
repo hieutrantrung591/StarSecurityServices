@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +13,6 @@ using StarSecurityServices.Models;
 namespace StarSecurityServices.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin")]
     public class ClientServicesController : Controller
     {
         private readonly StarSecurityDBContext _context;
@@ -23,6 +23,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/ClientServices
+        [Authorize]
         public IActionResult Index(int? page)
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
@@ -39,6 +40,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/ClientServices/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -59,6 +61,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/ClientServices/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewData["ClientId"] = new SelectList(_context.Clients, "Id", "Name");
@@ -71,6 +74,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Id,ClientId,ServiceId,CreatedOn,UpdatedOn")] ClientService clientService)
         {
             if (ModelState.IsValid)
@@ -85,6 +89,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/ClientServices/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -107,6 +112,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,ClientId,ServiceId,CreatedOn,UpdatedOn")] ClientService clientService)
         {
             if (id != clientService.Id)
@@ -140,6 +146,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/ClientServices/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -162,6 +169,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // POST: Admin/ClientServices/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var clientService = await _context.ClientServices.FindAsync(id);

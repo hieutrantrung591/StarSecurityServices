@@ -13,7 +13,6 @@ using StarSecurityServices.Models;
 namespace StarSecurityServices.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin")]
     public class RolesController : Controller
     {
         private readonly StarSecurityDBContext _context;
@@ -24,6 +23,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Roles
+        [Authorize]
         public IActionResult Index(int? page)
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
@@ -37,6 +37,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Roles/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -55,6 +56,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Roles/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -65,6 +67,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Id,Name,CreatedOn,UpdatedOn")] Role role)
         {
             if (ModelState.IsValid)
@@ -77,6 +80,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Roles/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -97,6 +101,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CreatedOn,UpdatedOn")] Role role)
         {
             if (id != role.Id)
@@ -128,6 +133,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Roles/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -148,6 +154,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // POST: Admin/Roles/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var role = await _context.Roles.FindAsync(id);

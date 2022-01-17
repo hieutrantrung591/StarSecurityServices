@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +13,6 @@ using StarSecurityServices.Models;
 namespace StarSecurityServices.Areas.Admin
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin")]
     public class DepartmentsController : Controller
     {
         private readonly StarSecurityDBContext _context;
@@ -23,6 +23,7 @@ namespace StarSecurityServices.Areas.Admin
         }
 
         // GET: Admin/Departments
+        [Authorize]
         public IActionResult Index(int? page)
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
@@ -36,6 +37,7 @@ namespace StarSecurityServices.Areas.Admin
         }
 
         // GET: Admin/Departments/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -54,6 +56,7 @@ namespace StarSecurityServices.Areas.Admin
         }
 
         // GET: Admin/Departments/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();

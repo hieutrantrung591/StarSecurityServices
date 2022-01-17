@@ -13,7 +13,6 @@ using StarSecurityServices.Models;
 namespace StarSecurityServices.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin")]
     public class ServicesController : Controller
     {
         private readonly StarSecurityDBContext _context;
@@ -24,6 +23,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Services
+        [Authorize]
         public IActionResult Index(int? page)
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
@@ -39,6 +39,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Services/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -58,6 +59,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Services/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewData["DivisionId"] = new SelectList(_context.Divisions, "Id", "Name");
@@ -69,6 +71,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Id,Name,DivisionId,CreatedOn,UpdatedOn")] Service service)
         {
             if (ModelState.IsValid)
@@ -82,6 +85,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Services/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -103,6 +107,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,DivisionId,CreatedOn,UpdatedOn")] Service service)
         {
             if (id != service.Id)
@@ -135,6 +140,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Services/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -156,6 +162,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // POST: Admin/Services/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var service = await _context.Services.FindAsync(id);

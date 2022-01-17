@@ -14,7 +14,6 @@ using System.Threading.Tasks;
 namespace StarSecurityServices.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
     public class HomeController : Controller
     {
         private readonly StarSecurityDBContext _context;
@@ -23,6 +22,8 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         {
             _context = context;
         }
+
+        [Authorize]
         public IActionResult Index()
         {
             DashboardViewModel viewModel = new DashboardViewModel()
@@ -67,6 +68,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 if (ModelState.IsValid)
                 {
                     Employee employee = _context.Employees
+                        .AsNoTracking()
                         .Include(p => p.Role)
                         .SingleOrDefault(p => p.Email.ToLower() == model.Email.ToLower().Trim());
 
@@ -83,12 +85,13 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                         return View(model);
                     }
 
-                    // Login Success
-                    // Identity
                     // Save Session
                     HttpContext.Session.SetString("EmployeeId", employee.Id.ToString());
                     HttpContext.Session.SetString("EmployeeName", employee.Name);
 
+                    var employeeId = HttpContext.Session.GetString("EmployeeId");                    
+
+                    // Identity
                     var employeeClaims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, employee.Name),
@@ -98,9 +101,9 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                         new Claim(ClaimTypes.Role, employee.Role.Name)
                     };
 
-                    var grandmaIdentity = new ClaimsIdentity(employeeClaims, "Employee Identity");
-                    var employeePrincipal = new ClaimsPrincipal(new[] { grandmaIdentity });
-                    await HttpContext.SignInAsync(employeePrincipal);
+                    var claimsIdentity = new ClaimsIdentity(employeeClaims, "Employee Identity");
+                    var claimsPrincipal = new ClaimsPrincipal(new[] { claimsIdentity });
+                    await HttpContext.SignInAsync(claimsPrincipal);                   
 
                     if (Url.IsLocalUrl(returnUrl))
                     {
@@ -129,6 +132,12 @@ namespace StarSecurityServices.Areas.Admin.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }               
+        }
+
+        [Route("not-found.html", Name = "Not Found")]
+        public IActionResult Error()
+        {
+            return View();
         }
     }
 }

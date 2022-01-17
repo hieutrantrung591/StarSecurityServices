@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+    <!-- include libraries(jQuery, bootstrap) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="~/css/Admin/style.css" />
+    <link rel="stylesheet" href="~/css/Admin/Pages/Error.css" />
+}
+
+<div class="container-fluid">
+    <!-- 404 Error Text -->
+    <div class="text-center">
+        <div class="error mx-auto" data-text="404">404</div>
+        <p class="lead mb-5">Page Not Found</p>
+        <p class="text-gray-500 mb-5">You don't have access to this function!</p>
+        <a class="btn btn-info text-white" asp-controller="Home" asp-action="Index">← Back to Dashboard</a>
+    </div>
+</div>

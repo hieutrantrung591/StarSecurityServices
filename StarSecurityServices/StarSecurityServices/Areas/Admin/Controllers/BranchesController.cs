@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +13,6 @@ using StarSecurityServices.Models;
 namespace StarSecurityServices.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin")]
     public class BranchesController : Controller
     {
         private readonly StarSecurityDBContext _context;
@@ -23,6 +23,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Branches
+        [Authorize]
         public IActionResult Index(int? page)
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
@@ -38,6 +39,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Branches/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -57,6 +59,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Branches/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewData["RegionId"] = new SelectList(_context.Regions, "Id", "Name");
@@ -68,6 +71,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Id,Name,Address,Phone,Description,RegionId,Latitude,Longtitude,CreatedOn,UpdatedOn")] Branch branch)
         {
             if (ModelState.IsValid)
@@ -83,6 +87,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Branches/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -104,6 +109,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Address,Phone,Description,RegionId,Latitude,Longtitude,CreatedOn,UpdatedOn")] Branch branch)
         {
             if (id != branch.Id)
@@ -138,6 +144,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Branches/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -159,6 +166,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // POST: Admin/Branches/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var branch = await _context.Branches.FindAsync(id);

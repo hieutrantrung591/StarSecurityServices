@@ -14,7 +14,6 @@ using StarSecurityServices.Models;
 namespace StarSecurityServices.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin")]
     public class VacanciesController : Controller
     {
         private readonly StarSecurityDBContext _context;
@@ -25,6 +24,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Vacancies
+        [Authorize]
         public IActionResult Index(int? page)
         {
             var pageNumber = page == null || page <= 0 ? 1 : page.Value;
@@ -42,6 +42,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Vacancies/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -66,6 +67,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Vacancies/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Address");
@@ -79,6 +81,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Id,JobId,DepartmentId,Description,Number,Status,BranchId,CreatedOn,UpdatedOn")] Vacancy vacancy)
         {
             if (ModelState.IsValid)
@@ -94,6 +97,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Vacancies/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -117,6 +121,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,JobId,DepartmentId,Description,Number,Status,BranchId,CreatedOn,UpdatedOn")] Vacancy vacancy)
         {
             if (id != vacancy.Id)
@@ -151,6 +156,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         }
 
         // GET: Admin/Vacancies/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -174,6 +180,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         // POST: Admin/Vacancies/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var vacancy = await _context.Vacancies.FindAsync(id);

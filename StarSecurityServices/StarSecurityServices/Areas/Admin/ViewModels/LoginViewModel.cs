@@ -10,14 +10,14 @@ namespace StarSecurityServices.Areas.Admin.ViewModels
     {
         [Key]
         [MaxLength(100)]
-        [Required(ErrorMessage = "Please enter Email")]
+        [Required(ErrorMessage = "Email cannot be empty")]
         [DataType(DataType.EmailAddress)]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Display(Name = "Password")]
-        [Required(ErrorMessage = "Please enter Password")]
+        [Required(ErrorMessage = "Password cannot be empty")]
         public string Password { get; set; }
     }
 }
