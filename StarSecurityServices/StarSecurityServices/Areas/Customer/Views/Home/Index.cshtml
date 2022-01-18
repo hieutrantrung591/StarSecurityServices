@@ -4,13 +4,11 @@
 }
 
 @section Styles {
-    <link rel="stylesheet" href="~/css/Client/Pages/Home.css">
-    <link rel="stylesheet" href="~/css/Client/Pages/About.css">
-    <link rel="stylesheet" href="~/css/Client/Utils/common.css">
+    <link rel="stylesheet" href="@Url.Content("~/css/Client/Pages/Home.css")">
+    <link rel="stylesheet" href="@Url.Content("~/css/Client/Pages/About.css")">
+    <link rel="stylesheet" href="@Url.Content("~/css/Client/Utils/common.css")">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet">
 }
-
-
 
 <section class="home" id="home">
     <div class="content">
@@ -336,5 +334,4 @@
             keyboard: true
         });
     </script>
-
 }

@@ -1,7 +1,12 @@
 ﻿
 @{ ViewData["Title"] = "About us";
                 Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml"; }
-<link rel="stylesheet" href="~/css/Client/Pages/About.css">
+
+
+@section Styles {
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/css/Client/Pages/About.css")">
+}
 
 <div class="breadcrumb-area">
     <div class="container">

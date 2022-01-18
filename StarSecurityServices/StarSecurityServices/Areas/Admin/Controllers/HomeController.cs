@@ -139,5 +139,10 @@ namespace StarSecurityServices.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public IActionResult LogoutConfirm()
+        {
+            return View();
+        }
     }
 }

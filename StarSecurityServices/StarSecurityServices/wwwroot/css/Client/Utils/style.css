@@ -86,34 +86,25 @@ header {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-.back-to-top {
+#myBtn {
+  display: none;
   position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  z-index: 996;
-  background: #fab909;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color:#fab909;
+  color: white;
+  cursor: pointer;
   width: 4rem;
   height: 4rem;
-  border-radius: 5rem;
-  transition: all 0.4s;
+  border-radius: 50%;
+  font-size: 1.75em;
 }
 
-.back-to-top i {
-  font-size: 24px;
-  color: #fff;
-  line-height: 0;
-}
-
-.back-to-top:hover {
-  background: #6bc1e9;
-  color: #fff;
-}
-
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
+#myBtn:hover {
+  background-color: #555;
 }
 
 /*--------------------------------------------------------------
