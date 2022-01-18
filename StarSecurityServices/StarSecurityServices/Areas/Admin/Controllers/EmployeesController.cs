@@ -151,6 +151,13 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            else
+            {
+                var errors = ModelState.Select(x => x.Value.Errors)
+                                       .Where(y => y.Count > 0)
+                                       .ToList();
+            }
+
             ViewData["BranchId"] = new SelectList(_context.Branches, "Id", "Name", employee.BranchId);
             ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name", employee.DepartmentId);
             ViewData["JobId"] = new SelectList(_context.Jobs, "Id", "Name", employee.JobId);

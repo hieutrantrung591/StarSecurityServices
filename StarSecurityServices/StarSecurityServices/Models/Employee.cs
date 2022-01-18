@@ -23,7 +23,7 @@ namespace StarSecurityServices.Models
         [Required]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter your password!")]
         public string Password { get; set; }
 
         [Required]
@@ -56,11 +56,6 @@ namespace StarSecurityServices.Models
         [Required]
         [DisplayName("Role")]
         public int RoleId { get; set; }
-
-        [NotMapped]
-        [Required]
-        [System.ComponentModel.DataAnnotations.Compare("Password")]
-        public string ConfirmPassword { get; set; }
 
         public virtual Branch Branch { get; set; }
         public virtual Department Department { get; set; }
