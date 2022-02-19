@@ -84,6 +84,7 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                         ViewBag.Error = "Login info is incorrect";
                         return View(model);
                     }
+                    Console.WriteLine(ViewBag.Error);
 
                     // Save Session
                     HttpContext.Session.SetString("EmployeeId", employee.Id.ToString());
@@ -110,13 +111,15 @@ namespace StarSecurityServices.Areas.Admin.Controllers
                         return Redirect(returnUrl);
                     }
                     return RedirectToAction("Index", "Home", new { Area = "Admin" });
+                } else
+                {
+                    return View();
                 }
             }
             catch
             {
                 return RedirectToAction("Login", "Home", new { Area = "Admin" });
             }
-            return RedirectToAction("Login", "Home", new { Area = "Admin" });
         }
 
         [Route("logout.html", Name = "Logout")]
