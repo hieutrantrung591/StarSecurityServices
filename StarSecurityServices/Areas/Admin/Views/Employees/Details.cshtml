@@ -1,0 +1,123 @@
+﻿@using System.Globalization
+@model StarSecurityServices.Models.Employee
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutEmployees.cshtml";
+}
+
+<div class="col-lg-12">
+    <h2>Details of Employee</h2>
+    <hr />
+</div>
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <div>
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Name)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Password)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Password)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Address)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Address)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Contact)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Contact)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Qualification)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Qualification)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Grade)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Grade)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Achievement)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Achievement)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Branch)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Branch.Name)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Department)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Department.Name)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Job)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Job.Name)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Role)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Role.Name)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.CreatedOn)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @{var createdDate = Model.CreatedOn.ToLocalTime()
+                                                  .ToString(
+                                                  CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern
+                                                  + " "
+                                                  + CultureInfo.CurrentUICulture.DateTimeFormat.LongTimePattern);
+                        }
+                        @Html.DisplayFor(model => createdDate)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.UpdatedOn)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @{var updatedDate = Model.UpdatedOn.ToLocalTime()
+                                                    .ToString(
+                                                    CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern
+                                                    + " "
+                                                    + CultureInfo.CurrentUICulture.DateTimeFormat.LongTimePattern);
+                        }
+                        @Html.DisplayFor(model => updatedDate)
+                    </dd>
+                </dl>
+            </div>
+            <form>
+                <button class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.Id">Edit</button>
+                <button class="btn btn-dark" asp-action="Index">Back to List</button>
+            </form>
+        </div>
+    </div>
+</div>

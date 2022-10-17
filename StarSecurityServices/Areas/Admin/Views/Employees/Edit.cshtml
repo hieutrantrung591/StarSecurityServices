@@ -1,0 +1,92 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@model StarSecurityServices.Models.Employee
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutEmployees.cshtml";
+}
+
+<div class="col-lg-12">
+    <h2>Edit Employee</h2>
+    <hr />
+</div>
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <form asp-action="Edit" asp-controller="Employees">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group">
+                            <label asp-for="Name" class="control-label"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="display: none;">
+                            <label asp-for="Password" class="control-label"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Address" class="control-label"></label>
+                            <input asp-for="Address" class="form-control" />
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Contact" class="control-label"></label>
+                            <input asp-for="Contact" class="form-control" />
+                            <span asp-validation-for="Contact" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Qualification" class="control-label"></label>
+                            <input asp-for="Qualification" class="form-control" />
+                            <span asp-validation-for="Qualification" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Grade" class="control-label"></label>
+                            <input asp-for="Grade" class="form-control" />
+                            <span asp-validation-for="Grade" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Achievement" class="control-label"></label>
+                            <input asp-for="Achievement" class="form-control" />
+                            <span asp-validation-for="Achievement" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="JobId" class="control-label"></label>
+                            <select asp-for="JobId" class="form-control" asp-items="ViewBag.JobId"></select>
+                            <span asp-validation-for="JobId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DepartmentId" class="control-label"></label>
+                            <select asp-for="DepartmentId" class="form-control" asp-items="ViewBag.DepartmentId"></select>
+                            <span asp-validation-for="DepartmentId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="BranchId" class="control-label"></label>
+                            <select asp-for="BranchId" class="form-control" asp-items="ViewBag.BranchId"></select>
+                            <span asp-validation-for="BranchId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="RoleId" class="control-label"></label>
+                            <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
+                            <span asp-validation-for="RoleId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                            <button class="btn btn-dark" asp-action="Index">Back to List</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

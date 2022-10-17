@@ -1,0 +1,91 @@
+﻿@model StarSecurityServices.Areas.Customer.ViewModels.BranchRegionViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/css/Client/Pages/Branch.css")" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin="" />
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+}
+
+<div class="breadcrumb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-text">
+                    <h1>OUR NETWORK</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container branch-body">
+    <div class="row">
+        <div class="col-lg-5 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    @foreach (var region in Model.Regions)
+                    {
+                        <div class="region-title">@region.Name Region</div>
+                        <div class="branch-list">
+                            @foreach (var item in Model.Branches)
+                            {
+                                @if (item.RegionId == region.Id)
+                                {
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div style="display: none;" class="branch-position">@item.GetDetailLatLong()</div>
+
+                                            <div class="branch-name">
+                                                <b>@Html.DisplayFor(modelItem => item.Name)</b>
+                                            </div>
+
+                                            <div class="address">
+                                                <i class="mdi mdi-map-marker"></i>
+                                                @Html.DisplayFor(modelItem => item.Address)
+                                            </div>
+
+                                            <div class="contact">
+                                                <i class="mdi mdi-phone"></i>
+                                                @Html.DisplayFor(modelItem => item.Phone)
+                                            </div>
+                                        </li>
+                                    </ul>
+                                }
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Find us on map</h3>
+                    <hr />
+                    <div id="map" style="height:500px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Leaflet JS -->
+    <script src="@Url.Content("~/js/leafletjs/leaflet-utils.js")"></script>
+    <script>
+        const map = new Leaflet("map");
+        map.displayMarkers(map.getMakerData());
+    </script>
+}

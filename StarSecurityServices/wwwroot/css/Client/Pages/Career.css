@@ -1,0 +1,90 @@
+﻿.job-banner.breadcrumb-area:before {
+    background: rgba(8, 24, 69, 0.5);
+}
+
+.job-banner.breadcrumb-area {
+    background-image: url('../../../images/Client/About/job-details-banner-l.jpg');
+}
+
+.job-area {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.badge {
+    padding: 0.75rem 1rem;
+    margin: 0 1.5rem;
+    font-size: 0.875em;
+    font-weight: 500;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.btn-big {
+    padding: 1rem 3rem;
+}
+
+.job-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+    line-height: 120%;   
+}
+
+.job-branch {
+    font-size: 1.25em;
+}
+
+.job-description {
+    margin: 3rem 0;
+}
+
+.job-img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.job-img::before {
+    position: absolute;
+    content: "";
+    background: #020e2a;
+    width: 100%;
+    height: 100%;
+    left: -2.5rem;
+    top: 2.5rem;
+    z-index: -1;
+}
+
+.career-area {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+.career-benefits {
+    padding-right: 4rem;
+}
+
+.job-list-item {
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 1rem;
+    border: 0.1rem solid #DEDEDE;
+}
+
+input[type="text"]:focus {
+    outline-color: #E6BF36;
+}
+
+.button {
+    padding: 0 1rem;
+}

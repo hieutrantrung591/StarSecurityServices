@@ -1,0 +1,132 @@
+﻿@model StarSecurityServices.Models.Branch
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutBranch.cshtml";
+}
+
+@section Styles {
+    <!-- Leaflet css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin="" />
+}
+
+<div class="col-lg-12">
+    <h2>Edit Branch</h2>
+    <hr />
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Branch Details</h4>
+                            <hr />
+
+                            <form asp-action="Edit">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" asp-for="Id" />
+                                <div class="form-group">
+                                    <label asp-for="Name" class="control-label"></label>
+                                    <input asp-for="Name" class="form-control" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Address" class="control-label"></label>
+                                    <input asp-for="Address" class="form-control" />
+                                    <span asp-validation-for="Address" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Phone" class="control-label"></label>
+                                    <input asp-for="Phone" class="form-control" />
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Description" class="control-label"></label>
+                                    <input asp-for="Description" class="form-control" />
+                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="RegionId" class="control-label"></label>
+                                    <select asp-for="RegionId" class="form-control" asp-items="ViewBag.RegionId"></select>
+                                    <span asp-validation-for="RegionId" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Latitude" class="control-label"></label>
+                                    <input asp-for="Latitude" class="form-control" lang="fr-CA" />
+                                    <span asp-validation-for="Latitude" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Longtitude" class="control-label"></label>
+                                    <input asp-for="Longtitude" class="form-control" lang="fr-CA" />
+                                    <span asp-validation-for="Longtitude" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Save" class="btn btn-primary" />
+                                    <button class="btn btn-dark" asp-action="Index">Back to List</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="branch-list" style="display: none;">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div style="display: none;" class="branch-position">@Model.GetDetailLatLong()</div>
+                                <div class="branch-name">
+                                    <b>@Model.Name</b>
+                                </div>
+                                <div class="address">
+                                    @Model.Address
+                                </div>
+                                <div class="contact">
+                                    @Model.Phone
+                                </div>
+                                <div class="description">
+                                    @Model.Description
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Map Location</h4>
+                            <hr />
+
+                            <div id="map-edit" style="height:500px;"></div>
+                        </div>
+                    </div>
+                    <div class="text-hint">
+                        Note: The marker show the current location. Click on a new position on the map and copy the Latitude and Longtitude value into their respective fields in the form.
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+    <script src="@Url.Content("~/js/leafletjs/leaflet-utils.js")"></script>
+    <script>
+        const map = new Leaflet("map-edit");       
+        map.viewPositionOnClick();
+        map.displayMarkers(map.getMakerData());
+    </script>
+}
+
